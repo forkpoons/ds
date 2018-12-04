@@ -55,7 +55,7 @@ let revapi32,
                         wrapper_color:"rgba(255,255,255,0)",
                         tmp:'<div class="tp-tab-wrapper"><div class="tp-tab-number">{{param1}}</div><div class="tp-tab-divider"></div><div class="tp-tab-title-mask"><div class="tp-tab-title">{{title}}</div></div></div>',
                         visibleAmount: 5,
-                        hide_onmobile: false,
+                        hide_onmobile: true,
                         hide_onleave:false,
                         hide_delay:200,
                         direction:"vertical",
@@ -68,10 +68,10 @@ let revapi32,
                         v_offset:0
                     }
                 },
-                responsiveLevels:[1240,1240,900,480],
+                responsiveLevels:[1240,1240,900,768],
                 visibilityLevels:[1240,1000,900,480],
-                gridwidth:[1920,1920,778,480],
-                gridheight:[1000,1000,960,720],
+                gridwidth:[1920,1920,1280,768],
+                gridheight:[1000,1000,960,900],
                 lazyType:"none",
                 parallax: {
                     type:"mouse",
@@ -119,15 +119,18 @@ let slide_length = document.querySelector('.case-slider').getElementsByTagName("
 function slider(a) {
     document.getElementById("home" + slide).classList.toggle("active");
     document.getElementById("mocap" + slide).classList.toggle("active");
+    document.getElementById("link" + slide).classList.toggle("active");
     if (a){
         if(slide === 1){
             document.getElementById("home" + slide_length).classList.toggle("active");
             document.getElementById("mocap" + slide_length).classList.toggle("active");
+            document.getElementById("link" + slide_length).classList.toggle("active");
             slide = slide_length
         }
         else {
             document.getElementById("home"+(slide - 1)).classList.toggle("active");
             document.getElementById("mocap"+(slide - 1)).classList.toggle("active");
+            document.getElementById("link" +(slide - 1)).classList.toggle("active");
             slide--
         }
     }
@@ -135,11 +138,13 @@ function slider(a) {
         if(slide === slide_length){
             document.getElementById("home1").classList.toggle("active");
             document.getElementById("mocap1").classList.toggle("active");
+            document.getElementById("link1").classList.toggle("active");
             slide = 1
         }
         else {
             document.getElementById("home" + (slide + 1)).classList.toggle("active");
             document.getElementById("mocap" + (slide + 1)).classList.toggle("active");
+            document.getElementById("link" + (slide + 1)).classList.toggle("active");
             slide++
         }
     }
