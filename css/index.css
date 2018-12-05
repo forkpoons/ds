@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&subset=cyrillic');
+
 
 body {
     margin: 0;
@@ -435,10 +435,17 @@ body.index {
 .case-slider {
     z-index: 10;
     display: flex;
-    width: calc(100vw - 500px);
+    width: 100vw;
     height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
     justify-content: space-between;
     align-items: center;
+}
+
+#slide3 .tp-parallax-wrap{
+    left: 0 !important;
 }
 
 .mocap {
@@ -453,44 +460,18 @@ body.index {
     animation-direction: revert;
 }
 
-@keyframes image11 {
+@keyframes image1 {
     from {
-        left: -50%;
+        right: 100%;
         opacity: 0;
     }
     50% {
         opacity: 0.4;
     }
     to {
-        left: 0;
+        right: 50%;
         opacity: 1;
     }
-}
-
-@keyframes image12 {
-    from {
-        left: -50%;
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.4;
-    }
-    to {
-        left: -140px;
-        opacity: 1;
-    }
-}
-
-#mocap1 img {
-    position: relative;
-    animation: image11 1.1s;
-    width: 90% !important;
-    height: auto !important;
-}
-
-#mocap1 img:nth-child(2) {
-    position: relative;
-    animation: image12 1.1s;
 }
 
 @keyframes image2 {
@@ -502,55 +483,50 @@ body.index {
         opacity: 0.4;
     }
     to {
-        right: 47%;
+        right: 50%;
         opacity: 1;
     }
 }
 
+#mocap1 img {
+    animation: image1 0.9s;
+    top:25% !important;
+    height: 50% !important;
+}
+
+#mocap1 img:nth-child(2) {
+    animation: image1 1.1s;
+}
+
 #mocap2 img {
-    right: 100%;
+    right: 50%!important;
     opacity: 0;
+    top:0;
+    height: 100% !important;
+    max-width: 100%;
 }
 
 #mocap2.active img {
-    right: 47%;
     opacity: 1;
-    width: 50% !important;
-    height: auto !important;
 }
 
 #mocap2 img:nth-child(1) {
-    position: relative;
     animation: image2 1.1s;
 }
 
 #mocap2 img:nth-child(2) {
-    position: relative;
     animation: image2 1.5s;
 }
 
 #mocap2 img:nth-child(3) {
-    position: relative;
     animation: image2 1.3s;
-}
-
-#mocap2.active {
-    display: flex;
 }
 
 .mocap img {
     width: auto !important;
-    height: auto !important;
-}
+    position: absolute;
+    right: 50%;
 
-#mocap1 img:nth-child(1) {
-    height: 100%;
-}
-
-#mocap1 img:nth-child(2) {
-    position: relative;
-    left: -140px;
-    width: 22% !important;
 }
 
 .case-slider {
@@ -678,6 +654,12 @@ body.index {
     opacity: 0.5;
     transition: all 0.5s;
 }
+#slide-109-layer-35 img{
+    display: block;
+}
+#slide-109-layer-35 img.active{
+    display: none;
+}
 .service-text {
     z-index: 16;
     max-width: 300px;
@@ -692,7 +674,7 @@ body.index {
     padding-top: 10px
 }
 
-.service-l {
+#slide-109-layer-37 .service-text, #slide-109-layer-37 .service-head {
     text-align: right !important;
 }
 
@@ -736,6 +718,7 @@ body.index {
     color: #FFFFFF;
     max-width: 620px;
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .request-left h1 {
@@ -746,7 +729,7 @@ body.index {
     font-size: 60px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .request-left h2 {
@@ -862,6 +845,12 @@ body.index {
     .request-left h1{
         font-size: 42px;
     }
+    .mocap{
+        width: 50%;
+    }
+    .slider-right{
+        width: 50%;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -921,12 +910,19 @@ body.index {
     .case-slider input{
         margin-bottom: 20px;
     }
-    .slider-right .link{
-        justify-content: center;
+    .case-slider{
+        flex-direction: column;
+        width: calc(100vw - 30px);
+        padding: 0 15px;
+        justify-content: flex-start;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
+    .slider-right .link{
+        justify-content: center;
+    }
     .request-right form {
         width: calc(100% - 30px);
         position: absolute;
@@ -948,7 +944,7 @@ body.index {
     .tp-tabs{
         display: none;
     }
-    .service-l{
+    #slide-109-layer-37 .service-text, #slide-109-layer-37 .service-head{
         text-align: left !important;
     }
     .service-card-m{
@@ -997,13 +993,6 @@ body.index {
         left: -9%;
         width: 100% !important;
     }
-    .case-slider{
-        flex-direction: column;
-        width: calc(100vw - 30px);
-        padding: 0 15px;
-        justify-content: flex-start;
-        align-items: center;
-    }
     .slider-right {
          width: 100%;
         display: flex;
@@ -1037,8 +1026,3 @@ body.index {
         width: calc(100vw - 40px);
     }
 }
-
-/********************************************************************
-#rev_slider_32_1-rs-particles{
-    display: none;
-}*/

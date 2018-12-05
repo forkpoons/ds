@@ -23,12 +23,14 @@ $('#service-card9').hover(function () { hov(9) }, function () { hov(0) });
 
 function hov(a) {
     if (a !== 0) {
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 7; i++) {
             document.querySelector('#service-card' + i).classList.add('active');
+            document.querySelector('#service-img' + i).classList.add('active');
         }
         document.querySelector('#service-card' + a).classList.remove('active');
+        document.querySelector('#service-img' + a).classList.remove('active');
     } else {
-        for (let i = 1; i < 10; i++) {
+        for (let i = 1; i < 7; i++) {
             document.querySelector('#service-card' + i).classList.remove('active');
         }
     }
