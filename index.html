@@ -6,7 +6,7 @@
     <meta name="author" content="Forkpoons"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0994f9"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&amp;subset=cyrillic" rel="stylesheet">
     <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
     <!-- LOAD JQUERY LIBRARY -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
@@ -35,6 +35,8 @@
 <body style="margin: 0; padding: 0" class="index">
 <video autoplay muted loop id="myVideo" style="position:fixed">
     <source src="rain.mp4" type="video/mp4">
+    <source src="rain.webm" type="video/webm">
+    <source src="rain.ogv" type="video/ogg">
 </video>
 <div id="rev_slider_32_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="delovie-seti"
      data-source="gallery" style="background:transparent;padding:0;">
@@ -175,7 +177,7 @@
                 <!-- LAYER NR. 14 -->
                 <div class="tp-caption rev_group"
                      id="slide-109-layer-37"
-                     data-x="['center','center','center','left']" data-hoffset="['-385','-300','-140','15']"
+                     data-x="['center','center','center','left']" data-hoffset="['-385','-270','-120','15']"
                      data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
                      data-type="group"
                      data-responsive_offset="off"
@@ -237,7 +239,7 @@
                 <!-- LAYER NR. 17 -->
                 <div class="tp-caption     rev_group"
                      id="slide-109-layer-40"
-                     data-x="['center','center','center','center']" data-hoffset="['385','270','140','325']"
+                     data-x="['center','center','center','center']" data-hoffset="['385','270','120','325']"
                      data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
                      data-type="group"
                      data-responsive_offset="off"
@@ -309,6 +311,8 @@
                 <div class="tp-caption "
                      id="slide-118-layer-19"
                      data-whitespace="nowrap"
+                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
                      data-type="shape"
                      data-responsive_offset="off"
                      data-responsive="off"
@@ -375,8 +379,8 @@
                                 <input type="text" placeholder="ТЕЛЕФОН" name="phone">
                                 <input type="text" placeholder="ЭЛЕКТРОННАЯ ПОЧТА" name="email">
                                 <input type="text" placeholder="ПАРА СЛОВ О ПРОЕКТЕ" name="about">
-                                <span>Нажимая на кнопку «Отправить», Вы соглашаетесь на обработку персональных данных</span>
-                                <button type="submit">Отправим</button>
+                                <span>Нажимая на кнопку «Отправить», Вы соглашаетесь на обработку <a href="#">персональных данных</a></span>
+                                <button type="submit">Отправить</button>
                             </form>
                         </div>
                     </div>
@@ -390,7 +394,7 @@
             <div class="header-right" id="header-right">
                 <div class="tel">+7 800 551 29 70</div>
                 <!--  для включения меню умрать комментарии в файле menu.js -->
-                <div class="menuFive" id="burger" style="cursor: default">
+                <div class="menuFive" id="burger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -399,17 +403,17 @@
         </div>
         <div class="menu-mask" id="menu">
             <div class="menu">
-                <div class="menu-item"><a href="#">о студии</a></div>
-                <div class="menu-item"><a href="#">портфолио</a></div>
-                <div class="menu-item"><a href="#">вакансии</a></div>
-                <div class="menu-item"><a href="#">контакты</a></div>
+                <div class="menu-item"><a onclick="revapi32.revshowslide(1);">главная</a></div>
+                <div class="menu-item"><a onclick="revapi32.revshowslide(2);">Услуги</a></div>
+                <div class="menu-item"><a onclick="revapi32.revshowslide(3);">Работы</a></div>
+                <div class="menu-item"><a onclick="revapi32.revshowslide(4);">Контакты</a></div>
             </div>
         </div>
         <div class="footer">
             <div class="mouse">
                 <div class="icon-scroll"></div>
             </div>
-            <div class="support">
+            <div class="support" onclick="revapi32.revshowslide(4);">
                 <img src="assets/5836c-support.png" alt="">
             </div>
         </div>

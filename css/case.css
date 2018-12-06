@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto&subset=cyrillic');
+.hero{
+    background: url("../assets/case1/back1.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+}
+.hero-left{
+    width: 53%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero-left img{
+    padding-left: 80px;
+}
+.hero-right{
+    width: calc(47% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 90px;
+}
+.hero-right h1, .hero-right h3{
+    color: white;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    margin: 15px 0;
+}
+.hero-right h1{
+    text-transform: uppercase;
+    line-height: 80px;
+    font-size: 60px;
+}
+.hero-right h3{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+p{
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+}
+.block{
+    padding: 120px 50px;
+}
+.block-head{
+    display: flex;
+}
+.block-head h2{
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 15vw;
+    margin: 0;
+}
+.block-head p{
+    width: 40%;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+    margin: 8px 0 0;
+}
+.block-head h2, .block-head p{
+    display: inline;
+    color: #555555;
+}
+.about-card{
+    display: flex;
+}
+.about-card h2{
+    width: 15vw;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    color: #555555;
+}
+.about-card p{
+    width: 40vw;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 16px;
+
+    color: #555555;
+}
+.about-card h2, .about-card p{
+    display: inline-block;
+}
+.about{
+    padding: 120px 0 120px 50px;
+}
+.about img{
+    position: absolute;
+    top:100vh;
+    right: 0;
+    width: 50vw;
+}
+.case1 .about-font{
+    font-family: 'Open Sans', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #464646;
+}
+.case1 .about-font2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+}
+.case1 .color span{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 80px;
+}
+.case1 .color span:nth-child(1){
+    background: #48CC57;
+}
+.case1 .color span:nth-child(2){
+    background: #BAF191;
+}
+.case1 .color span:nth-child(3){
+    background: #257A3C;
+}
+.case1 .color span:nth-child(4){
+    background: #FFD8B2;
+}
+.case1 .block-2{
+    background: #ffefe0 url("../assets/case1/block2.png") bottom no-repeat;
+    background-size: contain;
+    height: calc(100vw / 1.712 - 25px);
+}
+.case1 .block-2 .block-body{
+    position: relative;
+    margin-top:90px;
+    left: -50px;
+}
+.case1 .block-1{
+    height: calc(100vw / 1.7 - 245px);
+    background-size: cover;
+    background: #BAF191 url("../assets/case1/block1.png") bottom;
+}
+.case1 .block-3{
+    background: url("../assets/case1/block3.png");
+    height: calc(100vw / 1.806 - 245px);
+    background-size: cover;
+}
+.case1 .block-4{
+    background: url("../assets/case1/block4.png");
+    height: calc(100vw / 1.0323 - 245px);
+    background-size: cover;
+}
+.case1 .block-5{
+    background: url("../assets/case1/block5.png");
+    height: calc(100vw / 2.021 - 245px);
+    background-size: cover;
+}
+.case1 .block-6{
+    background: url("../assets/case1/block6.png");
+    height: calc(100vw / 1.882 - 245px);
+    background-size: cover;
+}
+.case1 .block-3 h2, .block-3 p{
+    color: white;
+}
+.case1 .block-6 h2, .block-6 p{
+    color: white;
+}
+.case1 .block-7{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #FFEFE0;
+    padding: 120px 0 100px;
+}
+.case1 .block-7 p{
+    width: 27%;
+}
+.case2 .about-font{
+    font-family: 'Open Sans', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #464646;
+}
+.case2 .about-font2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+}
+.case2 .color span{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 80px;
+}
+.case2 .color span:nth-child(1){
+    background: #F6C119;
+}
+.case2 .color span:nth-child(2){
+    background: #4F4F4F;
+}
+.case2 .color span:nth-child(3){
+    background: #1B1B1B;
+}
+.case2 .block-2{
+    background: #ffefe0 url("../assets/case2/block2.png") bottom no-repeat;
+    background-size: contain;
+    height: calc(100vw / 1.289 - 25px);
+}
+.case2 .block-2 .block-body{
+    position: relative;
+    margin-top:90px;
+    left: -50px;
+}
+.case2 .block-1{
+    height: calc(100vw / 1.7 - 245px);
+    background-size: cover;
+    background: #BAF191 url("../assets/case2/block1.png") bottom;
+}
+.case2 .block-3{
+    background: url("../assets/case2/block3.png");
+    height: calc(100vw / 1.714 - 245px);
+    background-size: cover;
+}
+.case2 .block-4{
+    background: url("../assets/case2/block4.png");
+    height: calc(100vw / 1.574 - 245px);
+    background-size: cover;
+}
+.case2 .block-5{
+    background: url("../assets/case2/block5.png");
+    height: calc(100vw / 1.899 - 245px);
+    background-size: cover;
+}
+.case2 .block-6{
+    background: url("../assets/case2/block6.png");
+    height: calc(100vw / 1.846 - 245px);
+    background-size: cover;
+}
+.case2 .block-3 h2, .block-3 p{
+    color: white;
+}
+.case2 .block-6 h2, .block-6 p{
+    color: white;
+}
+.case2 .block-7{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #FFEFE0;
+    padding: 120px 0 100px;
+}
+.case2 .block-7 p{
+    width: 27%;
+}

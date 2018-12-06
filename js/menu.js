@@ -1,5 +1,5 @@
 //открытие меню//
-/*
+
 const menuFive = document.querySelector('.menuFive');
 
 function addClassFunFive() {
@@ -9,7 +9,7 @@ function addClassFunFive() {
 }
 menuFive.addEventListener('click', addClassFunFive);
 document.querySelector('.menu-mask').addEventListener('click', addClassFunFive);
-*/
+
 
 $('#service-card1').hover(function () { hov(1) }, function () { hov(0) });
 $('#service-card2').hover(function () { hov(2) }, function () { hov(0) });

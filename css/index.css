@@ -66,7 +66,7 @@ body.index {
 
 .h1-main {
     font-size: 60px;
-    line-height: normal !important;
+    line-height: 80px !important;
 }
 
 .h3-main {
@@ -154,6 +154,7 @@ body.index {
     text-transform: uppercase;
     color: #000000;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .footer {
@@ -444,9 +445,6 @@ body.index {
     align-items: center;
 }
 
-#slide3 .tp-parallax-wrap{
-    left: 0 !important;
-}
 
 .mocap {
     display: none;
@@ -525,7 +523,7 @@ body.index {
 .mocap img {
     width: auto !important;
     position: absolute;
-    right: 50%;
+    right: 51%;
 
 }
 
@@ -543,7 +541,7 @@ body.index {
 }
 
 .case-slider h3 {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 20px;
     margin-bottom: 40px !important;
 }
@@ -666,7 +664,7 @@ body.index {
     white-space: normal;
     font-size: 16px;
     line-height: normal;
-    font-weight: 400;
+    font-weight: 300;
     color: #ffffff;
     letter-spacing: 0;
     font-family: Montserrat, serif;
@@ -712,7 +710,7 @@ body.index {
 .request-left h3 {
     font-family: Montserrat, serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     line-height: normal;
     font-size: 20px;
     color: #FFFFFF;
@@ -735,7 +733,7 @@ body.index {
 .request-left h2 {
     font-family: Montserrat, serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     line-height: normal;
     font-size: 24px;
     text-transform: uppercase;
@@ -746,8 +744,12 @@ body.index {
 
 .request-right span {
     line-height: normal;
+    font-weight: 300;
 }
 
+.request-right span a,.request-right span a:visited{
+    color:white;
+}
 .request-right form {
     width: 80%;
     display: flex;
@@ -772,6 +774,8 @@ body.index {
     overflow: hidden;
     margin: 30px 0;
     outline: none;
+    font-family: Montserrat;
+    font-weight: 300;
 }
 
 #slide-119-layer-1.tp-caption {
@@ -818,6 +822,9 @@ body.index {
     color: white;
 }
 
+.support{
+    cursor: pointer;
+}
 @media(min-width: 1400px) {
     .service-text {
         min-width: 300px;
@@ -827,6 +834,8 @@ body.index {
 @media (max-width: 1600px) {
     .h1-main {
         font-size: 50px !important;
+
+        line-height: normal !important;
     }
     .request-left h1{
         font-size: 52px;
@@ -851,6 +860,12 @@ body.index {
     .slider-right{
         width: 50%;
     }
+    .request-right form{
+        width: 70%;
+    }
+    .case-slider h1{
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -859,6 +874,12 @@ body.index {
     }
     .request-left h1{
         font-size: 36px;
+    }
+    .case-slider h1{
+        font-size: 40px;
+    }
+    .case-slider h3{
+        font-size: 18px;
     }
 }
 
@@ -1024,5 +1045,17 @@ body.index {
     .footer{
         margin: 15px 20px;
         width: calc(100vw - 40px);
+    }
+}
+@media (max-height: 700px) {
+    .request-right form input, .request-right form button{
+        margin: 10px 0;
+    }
+    .request-left h1{
+        margin-bottom: 0px;
+    }
+    .request-left h2{
+        margin-top: 40px;
+        margin-bottom: 10px;
     }
 }
