@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/case.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+    <script type="text/javascript" src="js/modernizr-custom.js"></script>
 </head>
 <body class="case2">
     <div class="header">
@@ -40,7 +41,13 @@
 
     <div class="hero">
         <div class="hero-left">
-            <img src="assets/case1/img1.png" alt=""></div>
+
+            <picture>
+                <source srcset="assets/case1-img2.webp" type="image/webp">
+                <source srcset="assets/case1-img2.png" type="image/jpeg">
+                <img src="assets/case1-img2.png" alt="Alt Text!">
+            </picture>
+        </div>
         <div class="hero-right">
             <h1>Ё-авто сервис</h1>
             <h3>Сайт кузовного ремонта автомобилей</h3>
