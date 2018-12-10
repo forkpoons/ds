@@ -6,10 +6,10 @@ function addClassFunFive() {
     document.getElementById("burger").classList.toggle("clickMenuFive");
     document.getElementById("menu").classList.toggle("active");
     document.getElementById("header-right").classList.toggle("active");
+    document.getElementById("support").classList.toggle("active");
 }
 menuFive.addEventListener('click', addClassFunFive);
 document.querySelector('.menu-mask').addEventListener('click', addClassFunFive);
-
 
 $('#service-card1').hover(function () { hov(1) }, function () { hov(0) });
 $('#service-card2').hover(function () { hov(2) }, function () { hov(0) });

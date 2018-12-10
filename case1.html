@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/case.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+
+    <script type="text/javascript" src="js/modernizr-custom.js"></script>
 </head>
 <body class="case1">
     <div class="header">
@@ -40,7 +42,12 @@
 
     <div class="hero">
         <div class="hero-left">
-            <img src="assets/case1/img1.png" alt=""></div>
+            <picture>
+                <source srcset="assets/case1-img1.webp" type="image/webp">
+                <source srcset="assets/case1-img1.png" type="image/jpeg">
+                <img src="assets/case1-img1.png" alt="Alt Text!">
+            </picture>
+        </div>
         <div class="hero-right">
             <h1>адвента асб</h1>
             <h3>Сайт агентства содействия бизнесу</h3>
@@ -74,7 +81,11 @@
             <h2>цвета</h2>
             <p class="color"><span></span><span></span><span></span><span></span></p>
         </div>
-        <img src="assets/case1/img2.png" alt="">
+        <picture>
+            <source srcset="assets/case1-img2.webp" type="image/webp">
+            <source srcset="assets/case1-img2.png" type="image/jpeg">
+            <img src="assets/case1-img2.png" alt="Alt Text!">
+        </picture>
     </div>
     <div class="block block-1">
         <div class="block-head">
@@ -107,7 +118,7 @@
     </div>
     <div class="block block-6">
         <div class="block-head">
-            <h2>Мобильная<br></br>версия</h2>
+            <h2>Мобильная<br>версия</h2>
             <p>Для мобильной версии вид бухгалтерских услуг и услуг по сертификации видоизменили для удобства пользователя, переместили некоторые блоки. Дизайн адаптивный, под все виды современных экранов.</p>
         </div>
     </div>

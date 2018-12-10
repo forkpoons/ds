@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto&subset=cyrillic');
+.header a,.header a:hover,.header a:visited{
+    color:white;
+}
+.webp .case1 .hero{
+    background: #00b241 url("../assets/case1-back1.webp");
+    background-size: cover;
+}
+.no-webp .case1 .hero{
+
+    background: #00b241 url("../assets/case1-back1.png");
+    background-size: cover;
+}
 .hero{
-    background: url("../assets/case1-back1.png");
     width: 100%;
     height: 100vh;
-    background-size: cover;
     display: flex;
 }
 .hero-left{
@@ -148,8 +158,13 @@ p{
 .case1 .color span:nth-child(4){
     background: #FFD8B2;
 }
-.case1 .block-2{
+.webp .case1 .block-2{
+    background: #ffefe0 url("../assets/case1-block2.webp") bottom no-repeat;
+}
+.no-webp .case1 .block-2{
     background: #ffefe0 url("../assets/case1-block2.png") bottom no-repeat;
+}
+.case1 .block-2{
     background-size: contain;
     height: calc(100vw / 1.712 - 25px);
 }
@@ -158,30 +173,60 @@ p{
     margin-top:90px;
     left: -50px;
 }
+.webp .case1 .block-1{
+    background: #BAF191 url("../assets/case1-block1.webp") bottom;
+    background-size: cover;
+}
+.no-webp .case1 .block-1{
+    background: #BAF191 url("../assets/case1-block1.png") bottom;
+    background-size: cover;
+}
 .case1 .block-1{
     height: calc(100vw / 1.7 - 245px);
+}
+.webp .case1 .block-3 {
+    background: url("../assets/case1-block3.webp");
     background-size: cover;
-    background: #BAF191 url("../assets/case1-block1.png") bottom;
+}
+.no-webp .case1 .block-3 {
+    background: url("../assets/case1-block3.png");
+    background-size: cover;
+}
+.webp .case1 .block-4 {
+    background: url("../assets/case1-block4.webp");
+    background-size: cover;
+}
+.no-webp .case1 .block-4 {
+    background: url("../assets/case1-block4.png");
+    background-size: cover;
+}
+.webp .case1 .block-5 {
+    background: url("../assets/case1-block5.webp");
+    background-size: cover;
+}
+.no-webp .case1 .block-5 {
+    background: url("../assets/case1-block5.png");
+    background-size: cover;
+}
+.webp .case1 .block-6 {
+    background: url("../assets/case1-block6.webp");
+    background-size: cover;
+}
+.no-webp .case1 .block-6 {
+    background: url("../assets/case1-block6.png");
+    background-size: cover;
 }
 .case1 .block-3{
-    background: url("../assets/case1-block3.png");
     height: calc(100vw / 1.806 - 245px);
-    background-size: cover;
 }
 .case1 .block-4{
-    background: url("../assets/case1-block4.png");
     height: calc(100vw / 1.0323 - 245px);
-    background-size: cover;
 }
 .case1 .block-5{
-    background: url("../assets/case1-block5.png");
     height: calc(100vw / 2.021 - 245px);
-    background-size: cover;
 }
 .case1 .block-6{
-    background: url("../assets/case1-block6.png");
     height: calc(100vw / 1.882 - 245px);
-    background-size: cover;
 }
 .case1 .block-3 h2, .block-3 p{
     color: white;
@@ -198,6 +243,18 @@ p{
 }
 .case1 .block-7 p{
     width: 27%;
+}
+.webp .case2 .hero{
+    background: #717171 url("../assets/case2-back1.webp");
+    background-size: cover;
+}
+.no-webp .case2 .hero{
+
+    background: #717171 url("../assets/case2-back1.png");
+    background-size: cover;
+}
+.case2 .hero-left{
+    background: #f6c119;
 }
 .case2 .about-font{
     font-family: 'Open Sans', serif;
@@ -233,45 +290,85 @@ p{
 .case2 .color span:nth-child(3){
     background: #1B1B1B;
 }
-.case2 .block-2{
-    background: #ffefe0 url("../assets/case2-block2.png") bottom no-repeat;
+
+.webp .case2 .block-2 {
+    background: #f9d36f url("../assets/case2-block2.webp") bottom no-repeat;
     background-size: contain;
-    height: calc(100vw / 1.289 - 25px);
+}
+.no-webp .case2 .block-2 {
+    background: #f9d36f url("../assets/case2-block2.png") bottom no-repeat;
+    background-size: contain;
+}
+.case2 .block-2{
+    height: calc(100vw / 1.289 - 253px);
 }
 .case2 .block-2 .block-body{
     position: relative;
     margin-top:90px;
     left: -50px;
 }
+.webp .case2 .block-1 {
+    background: #ffefe0 url("../assets/case2-block1.webp") bottom no-repeat;
+    background-size: cover;
+}
+.no-webp .case2 .block-1 {
+    background: #ffefe0 url("../assets/case2-block1.png") bottom no-repeat;
+    background-size: cover;
+}
+.webp .case2 .block-3 {
+    background: #ffefe0 url("../assets/case2-block3.webp") bottom no-repeat;
+    background-size: cover;
+}
+.no-webp .case2 .block-3 {
+    background: #ffefe0 url("../assets/case2-block3.png") bottom no-repeat;
+    background-size: cover;
+}
+.webp .case2 .block-4 {
+    background: #ffefe0 url("../assets/case2-block4.webp") bottom no-repeat;
+    background-size: cover;
+}
+.no-webp .case2 .block-4 {
+    background: #ffefe0 url("../assets/case2-block4.png") bottom no-repeat;
+    background-size: cover;
+}
+.webp .case2 .block-5 {
+    background: #ffefe0 url("../assets/case2-block5.webp") bottom no-repeat;
+    background-size: contain;
+}
+.no-webp .case2 .block-5 {
+    background: #ffefe0 url("../assets/case2-block5.png") bottom no-repeat;
+    background-size: contain;
+}
+.webp .case2 .block-6 {
+    background: white url("../assets/case2-block6.webp") bottom no-repeat;
+    background-size: cover;
+}
+.no-webp .case2 .block-6 {
+    background: #ffefe0 url("../assets/case2-block6.png") bottom no-repeat;
+    background-size: cover;
+}
 .case2 .block-1{
     height: calc(100vw / 1.7 - 245px);
-    background-size: cover;
-    background: #BAF191 url("../assets/case2-block1.png") bottom;
 }
 .case2 .block-3{
-    background: url("../assets/case2-block3.png");
     height: calc(100vw / 1.714 - 245px);
-    background-size: cover;
 }
 .case2 .block-4{
-    background: url("../assets/case2-block4.png");
     height: calc(100vw / 1.574 - 245px);
-    background-size: cover;
+}
+.case2 .block-4 h2, .case2 .block-4 p{
+    color:white;
 }
 .case2 .block-5{
-    background: url("../assets/case2-block5.png");
-    height: calc(100vw / 1.899 - 245px);
-    background-size: cover;
+    height: calc(100vw / 1.899 - 44px);
 }
 .case2 .block-6{
-    background: url("../assets/case2-block6.png");
     height: calc(100vw / 1.846 - 245px);
-    background-size: cover;
 }
 .case2 .block-3 h2, .block-3 p{
     color: white;
 }
-.case2 .block-6 h2, .block-6 p{
+.case2 .block-6 h2, .block-6 p, .case2 .block-1 h2, .block-1 p{
     color: white;
 }
 .case2 .block-7{
