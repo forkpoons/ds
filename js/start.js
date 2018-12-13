@@ -109,9 +109,20 @@ let revapi32,
         if(typeof ExplodingLayersAddOn !== "undefined") ExplodingLayersAddOn(tpj, revapi32);
         RsTypewriterAddOn(tpj, revapi32);
         RsParticlesAddOn(revapi32);
+        let sl = 0;
+        revapi32.bind("revolution.slide.onbeforeswap", function (e, data) {
+            if(sl === 1)
+            document.querySelector('.mouse').classList.add("change");
+            sl = 1;
+        });
     }
     /* END OF ON LOAD FUNCTION */
+
 }()); /* END OF WRAPPING FUNCTION */
+
+
+
+
 
 let slide = 1;
 let slide_length = document.querySelector('.case-slider').getElementsByTagName("span").length;

@@ -368,7 +368,7 @@ p{
 .case2 .block-3 h2, .block-3 p{
     color: white;
 }
-.case2 .block-6 h2, .block-6 p, .case2 .block-1 h2, .block-1 p{
+.case2 .block-6 h2, .block-6 p, .case2 .block-1 h2, .case2 .block-1 p{
     color: white;
 }
 .case2 .block-7{
@@ -380,4 +380,8 @@ p{
 }
 .case2 .block-7 p{
     width: 27%;
+}
+.header .logo img{
+    position: relative;
+    bottom: 5px;
 }

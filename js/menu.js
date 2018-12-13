@@ -7,6 +7,7 @@ function addClassFunFive() {
     document.getElementById("menu").classList.toggle("active");
     document.getElementById("header-right").classList.toggle("active");
     document.getElementById("support").classList.toggle("active");
+    document.getElementById("logo").classList.toggle("active");
 }
 menuFive.addEventListener('click', addClassFunFive);
 document.querySelector('.menu-mask').addEventListener('click', addClassFunFive);
@@ -48,5 +49,15 @@ function service(object) {
             }
         }
         document.getElementById(object.id).classList.add('visible');
+    }
+}
+function modal(open) {
+    if (open) {
+        document.getElementById('modal').classList.add('active');
+        document.getElementById('modal').classList.add('visible');
+    }
+    else {
+        document.getElementById('modal').classList.remove('visible');
+        setTimeout(function () { document.getElementById('modal').classList.remove('active'); }, 500);
     }
 }

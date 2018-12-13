@@ -1,8 +1,8 @@
-
-
 body {
-    margin: 0;
-}
+     margin: 0;
+     background: url("https://xn----ctbfebbvt1a7am7h.xn--p1ai/assets/rain.jpg");
+    background-size: cover;
+ }
 
 body.index {
     width: 100vw;
@@ -83,6 +83,7 @@ body.index {
     margin-top: 20px;
     font-size: 20px !important;
     text-transform: none;
+    font-weight: 300 !important;
 }
 
 .icon-scroll:before {
@@ -100,7 +101,7 @@ body.index {
 
 .icon-scroll, .icon-scroll:before {
     position: fixed;
-    left: 50%;
+    left: calc(50% + 5px);
     bottom: 30px;
 }
 
@@ -332,7 +333,7 @@ body.index {
     font-size: 24px;
     letter-spacing: 0.15em;
     line-height: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-family: Montserrat, serif;
     text-transform: uppercase;
     width: 80px;
@@ -391,7 +392,7 @@ body.index {
     position: absolute;
     overflow: hidden;
     left: -120px;
-    height: 40px;
+    height: 50px;
     width: 140px;
 }
 
@@ -543,7 +544,7 @@ body.index {
     line-height: normal;
 }
 
-.case-slider h1 {
+.case-slider h2 {
     font-weight: normal;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -787,12 +788,14 @@ body.index {
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-    margin: 30px 0;
+    margin-top: 60px;
     outline: none;
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     font-weight: 300;
 }
-
+.request-right form button, .request-right span{
+    margin-top: 30px;
+}
 #slide-119-layer-1.tp-caption {
     white-space: normal !important;
     width: 100vw;
@@ -823,7 +826,9 @@ body.index {
 ::-webkit-input-placeholder {
     color: white;
 }
-
+input:focus::placeholder{
+    color: rgba(255,255,255,0.5);
+}
 ::-moz-placeholder {
     color: white;
 }
@@ -847,6 +852,126 @@ body.index {
 .support img{
     width: 48px;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    color: white !important;
+    transition: all 5000s ease-in-out 0s;
+}
+@keyframes modal {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 10000;
+    background: white;
+    display: none;
+    animation: modal 0.3s;
+    opacity: 0;
+    animation-direction: reverse;
+}
+.modal-logo{
+    position: fixed;
+    top:50px;
+    left: 50px;
+}
+.modal-close{
+    position: fixed;
+    top:50px;
+    right: 50px;
+    cursor: pointer;
+    height: 50px;
+}
+.modal-close span{
+    position: relative;
+    border-radius: 1px;
+    width: 100%;
+    height: 2px;
+    display: block;
+    background: #555555;
+}
+.modal-close span:nth-child(1) {
+    transform: rotate(45deg);
+    width: 40px !important;
+    left: 0 !important;
+    top: 10px;
+}
+.modal-close span:nth-child(2) {
+    transform: rotate(-45deg);
+    width: 40px !important;
+    left: 0 !important;
+    top: 8px;
+}
+.modal.active{
+    display: block;
+    opacity: 0;
+}
+@keyframes modal-end {
+    from{
+        opacity: 1;}
+    to{
+        opacity: 0;
+    }
+}
+.modal.active.visible{
+    opacity: 1;
+    animation: modal-end 0.3s;
+    animation-direction: reverse;
+}
+.modal .contant{
+    padding: 120px 0;
+}
+.modal h3, .modal p{
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 23px;
+    font-size: 16px;
+    color: #555555;
+    margin: 0 10% 20px;
+}
+.modal h3{
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.modal-head h3{
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #555555;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+.modal-head h2{
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #555555;
+    text-align: center;
+}
+
+.error_name,.error{
+    height: 20px;
+}
 @media(min-width: 1400px) {
     .service-text {
         min-width: 300px;
@@ -864,6 +989,10 @@ body.index {
     }
 }
 @media (max-width: 1400px) {
+    #mocap1 img {
+        top: 33% !important;
+        height: 34% !important;
+    }
     .h1-main {
         font-size: 40px !important;
     }
@@ -885,7 +1014,7 @@ body.index {
     .request-right form{
         width: 70%;
     }
-    .case-slider h1{
+    .case-slider h2{
         font-size: 50px;
     }
     .request-left, .request-right{
@@ -900,7 +1029,7 @@ body.index {
     .request-left h1{
         font-size: 36px;
     }
-    .case-slider h1{
+    .case-slider h2{
         font-size: 40px;
     }
     .case-slider h3{
@@ -926,11 +1055,26 @@ body.index {
     .request-left{
         display: none;
     }
+    .modal-head, .modal h3, .modal p{
+        margin: 0 55px 20px 20px;
+        max-width: calc(100vw - 75px);
+    }
+    .modal-logo{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+    .modal-close{
+        top:20px;
+        right: 20px;
+    }
 }
 
+#slide-117-layer-7 .tp-parallax-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap .tp-mask-wrap{
+    position: static !important;}
 @media (max-width: 900px) {
+
     #slide-117-layer-7 .tp-parallax-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap .tp-mask-wrap{
-        position: static !important;
         overflow: visible !important;
     }
     .h1-main {
@@ -951,7 +1095,7 @@ body.index {
     #slide-109-layer-37.tp-caption, #slide-109-layer-40.tp-caption {
         height: auto !important;
     }
-    .case-slider h1{
+    .case-slider h2{
         font-size: 30px;
     }
     .case-slider h3{
@@ -964,12 +1108,46 @@ body.index {
         flex-direction: column;
         width: calc(100vw - 30px);
         padding: 0 15px;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+    }
+    .menu-mask.active .menu{
+        width: 100%;
+    }
+    .logo.active path{
+        fill: #555555;
+    }
+    .menuFive:not(.clickMenuFive):hover span {
+        animation-play-state: paused;
+    }
+    .mocap{
+        width: 100%;
+    }
+    #mocap1 img{
+        width: 90% !important;
+        height: auto !important;
+        max-width: calc(100vh - 320px) !important;
+    }
+    .mocap img{
+        position: static;
+    }
+    .mocap.active{
+        display: flex;
+        justify-content: center;
+    }
+    .mouse.change{
+        opacity: 0;
+        transition: opacity 0.2s;
     }
 }
 
 @media (max-width: 768px) {
+    .control-left:hover, .control-right:hover{
+        box-shadow: none;
+    }
+    .case-slider input{
+        width: 100%;
+    }
     .slider-right .link{
         justify-content: center;
     }
@@ -980,12 +1158,11 @@ body.index {
         width: 100%;
     }
     .request-right form input, .request-right form button{
-        margin: 12px 0;
+        margin-top: 24px;
         padding: 5px 0;
     }
     .header{
         margin: 15px;
-
         width: calc(100vw - 30px);
     }
     .tp-tabs{
@@ -1013,18 +1190,11 @@ body.index {
         opacity: 1;
     }
     .service-card.visible .service-text{
-        height: 50px;
+        height: 70px;
     }
     .mocap{
         height: 200px;
         align-items: flex-end;
-    }
-    .mocap img{
-        position: static;
-    }
-    .mocap.active{
-        display: flex;
-        justify-content: center;
     }
     @keyframes image2 {
         from {
@@ -1045,15 +1215,18 @@ body.index {
     }
     #mocap2.active img{
         left: -9%;
-        width: 100% !important;
-        margin-bottom: -20%;
+        width: auto !important;
+        height: 110% !important;
+        margin-bottom: -10%;
+        max-height: calc(100vh - 360px);
     }
     .slider-right {
-         width: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-     }
-    .case-slider h1{
+        padding-bottom: 100px;
+    }
+    .case-slider h2{
         font-size: 18px;
         text-align: center;
         margin-bottom: 10px;
@@ -1087,13 +1260,16 @@ body.index {
     .header-right{
         align-items: center;
     }
+    .video{
+         display: none ;
+    }
 }
-@media (max-height: 700px) {
+@media (max-height: 700px){
     .request-right form input, .request-right form button{
-        margin: 10px 0;
+        margin-top: 18px;
     }
     .request-left h1{
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
     .request-left h2{
         margin-top: 40px;
