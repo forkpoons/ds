@@ -1,13 +1,13 @@
 body {
-     margin: 0;
-     background: url("https://xn----ctbfebbvt1a7am7h.xn--p1ai/assets/rain.jpg");
-    background-size: cover;
- }
+    margin: 0;
+}
 
 body.index {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: url("https://xn----ctbfebbvt1a7am7h.xn--p1ai/assets/rain.jpg");
+    background-size: cover;
 }
 
 .header {
