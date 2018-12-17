@@ -61,3 +61,13 @@ function modal(open) {
         setTimeout(function () { document.getElementById('modal').classList.remove('active'); }, 500);
     }
 }
+function modal2(open) {
+    if (open) {
+        document.getElementById('modal2').classList.add('active');
+        document.getElementById('modal2').classList.add('visible');
+    }
+    else {
+        document.getElementById('modal2').classList.remove('visible');
+        setTimeout(function () { document.getElementById('modal2').classList.remove('active'); }, 500);
+    }
+}
