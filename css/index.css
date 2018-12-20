@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'Montserrat';
+    src: url('https://xn----ctbfebbvt1a7am7h.xn--p1ai/fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url('https://xn----ctbfebbvt1a7am7h.xn--p1ai/fonts/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     margin: 0;
 }
@@ -9,7 +21,30 @@ body.index {
     background: url("https://xn----ctbfebbvt1a7am7h.xn--p1ai/assets/rain.jpg");
     background-size: cover;
 }
-
+.preload.none{
+    display: none;
+}
+.preload.hide{
+    opacity: 0;
+}
+.preload{
+    opacity: 1;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 11000;
+    background: rgba(9, 148, 255, 1);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+.preload img{
+    min-width: 100px;
+    min-height: 100px;
+}
 .header {
     position: fixed;
     top: 0;
@@ -56,13 +91,16 @@ body.index {
     font-size: 23px;
     line-height: 28px;
     font-weight: 400;
-    color: rgb(255, 255, 255);
     letter-spacing: 0;
     font-family: Montserrat, serif;
     text-transform: uppercase;
     margin-right: 30px;
 }
 
+.header .tel a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
 
 @keyframes scroll {
     0% {
@@ -663,18 +701,28 @@ body.index {
     opacity: 0.5;
     transition: all 0.5s;
 }
+#slide-2 .tp-mask-wrap{
+    height:100vh !important;
+    top:-100px;
+}
+#slide-2 .tp-caption{
+    top:100px;
+}
 #slide-109-layer-35 img{
     display: block;
 }
 #slide-109-layer-35 img.active{
     display: none;
 }
+#slide-117-layer-7 .tp-mask-wrap{
+    min-width: 600px !important;
+}
 .service-text {
     z-index: 16;
     max-width: 300px;
     white-space: normal;
     font-size: 16px;
-    line-height: normal;
+    line-height: 23px;
     font-weight: 300;
     color: #ffffff;
     letter-spacing: 0;
@@ -723,7 +771,7 @@ body.index {
     font-family: Montserrat, serif;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: 27px;
     font-size: 20px;
     color: #FFFFFF;
     max-width: 620px;
@@ -731,6 +779,10 @@ body.index {
     margin-bottom: 10px;
 }
 
+.request-left h3 a{
+    color: white;
+    text-decoration: none;
+}
 .request-left h1 {
     font-family: Montserrat, serif;
     font-style: normal;
@@ -999,6 +1051,10 @@ input:-webkit-autofill:active {
     font-size: 16px;
     color: #555555;
     margin: 0 10% 20px;
+}
+.modal p a{
+    color:#555;
+    text-decoration: none;
 }
 .modal h3{
     text-transform: uppercase;
@@ -1339,5 +1395,14 @@ input:-webkit-autofill:active {
     .request-left h2{
         margin-top: 40px;
         margin-bottom: 10px;
+    }
+    .service-head{
+        font-size: 16px;
+    }
+    .service-text{
+        font-size: 12px;
+    }
+    #slide-117-layer-7{
+        left:-80px;
     }
 }

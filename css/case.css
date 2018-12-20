@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto&subset=cyrillic');
+.header{
+    margin: 0;
+    padding: 50px 50px 16px;
+    transition: all 0.1s;
+    height: max-content;
+}
 .header a,.header a:hover,.header a:visited{
-    color:white;
+    color:#fff;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo svg{
+    display: block;
+    margin-right: 10px;
+}
+.header.white{
+    background:white;
+}
+.header-right{
+    align-items: center;
+}
+.header .tel{
+    color: #fff;
+}
+.menuFive span{
+    background: #fff;
+    transition: all 0.6s, background-color 0.1s;
+}
+.support{
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+.support:hover{
+    opacity: 1;
 }
 .webp .case1 .hero{
     background: #00b241 url("../assets/case1-back1.webp");
@@ -15,6 +49,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    min-height: 600px;
 }
 .hero-left{
     width: 53%;
@@ -22,7 +57,11 @@
     justify-content: flex-end;
     align-items: center;
 }
+.hero-left picture{
+    max-width: 100%;
+}
 .hero-left img{
+    max-width: 95%;
     padding-left: 80px;
 }
 .hero-right{
@@ -42,7 +81,6 @@
 }
 .hero-right h1{
     text-transform: uppercase;
-    line-height: 80px;
     font-size: 60px;
 }
 .hero-right h3{
@@ -61,6 +99,7 @@ p{
 }
 .block-head{
     display: flex;
+    padding-bottom: 60px;
 }
 .block-head h2{
     font-family: Montserrat, serif;
@@ -158,80 +197,65 @@ p{
 .case1 .color span:nth-child(4){
     background: #FFD8B2;
 }
-.webp .case1 .block-2{
-    background: #ffefe0 url("../assets/case1-block2.webp") bottom no-repeat;
-}
-.no-webp .case1 .block-2{
-    background: #ffefe0 url("../assets/case1-block2.png") bottom no-repeat;
-}
 .case1 .block-2{
-    background-size: contain;
-    height: calc(100vw / 1.712 - 25px);
-}
-.case1 .block-2 .block-body{
-    position: relative;
-    margin-top:90px;
-    left: -50px;
+    background: #ffefe0;
 }
 .webp .case1 .block-1{
-    background: #BAF191 url("../assets/case1-block1.webp") bottom;
-    background-size: cover;
+    background: #BAF191 url("../assets/case1-block1.webp") bottom no-repeat;
+    background-size: 100%;
 }
 .no-webp .case1 .block-1{
-    background: #BAF191 url("../assets/case1-block1.png") bottom;
-    background-size: cover;
+    background: #BAF191 url("../assets/case1-block1.png") bottom no-repeat;
+    background-size: 100%;
 }
 .case1 .block-1{
     height: calc(100vw / 1.7 - 245px);
 }
 .webp .case1 .block-3 {
-    background: url("../assets/case1-block3.webp");
-    background-size: cover;
+    background: #53cb59 url(../assets/case1-block3.webp) bottom no-repeat;
+    background-size: 100% auto;
 }
 .no-webp .case1 .block-3 {
-    background: url("../assets/case1-block3.png");
-    background-size: cover;
+    background: #53cb59 url(../assets/case1-block3.png) bottom no-repeat;
+    background-size: 100% auto;
 }
-.webp .case1 .block-4 {
-    background: url("../assets/case1-block4.webp");
-    background-size: cover;
-}
-.no-webp .case1 .block-4 {
-    background: url("../assets/case1-block4.png");
-    background-size: cover;
+.case1 .block-4 {
+    background: #e2fbc9;
 }
 .webp .case1 .block-5 {
-    background: url("../assets/case1-block5.webp");
-    background-size: cover;
+    background: url(../assets/case1-block5.webp) bottom no-repeat;
+    background-size: 100% auto;
 }
 .no-webp .case1 .block-5 {
-    background: url("../assets/case1-block5.png");
-    background-size: cover;
+    background: url(../assets/case1-block5.png) bottom no-repeat;
+    background-size: 100% auto;
 }
 .webp .case1 .block-6 {
-    background: url("../assets/case1-block6.webp");
+    background: url("../assets/case1-block6.webp") bottom no-repeat;
     background-size: cover;
 }
 .no-webp .case1 .block-6 {
-    background: url("../assets/case1-block6.png");
+    background: url("../assets/case1-block6.png") bottom no-repeat;
     background-size: cover;
 }
 .case1 .block-3{
-    height: calc(100vw / 1.806 - 245px);
-}
-.case1 .block-4{
-    height: calc(100vw / 1.0323 - 245px);
+    height: calc(100vw / 1.6806 - 245px);
 }
 .case1 .block-5{
     height: calc(100vw / 2.021 - 245px);
 }
-.case1 .block-6{
-    height: calc(100vw / 1.882 - 245px);
+ .block-body{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
-.case1 .block-3 h2, .block-3 p{
-    color: white;
+.case1 .block-2 .block-body img, .case1 .block-4 .block-body img{
+    width: 100%;
 }
-.case1 .block-6 h2, .block-6 p{
+.case1 .block-6 .block-body img{
+    width: 80%;
+}
+.case1 .block-6 h2, .block-6 p, .case1 .block-3 h2, .block-3 p{
     color: white;
 }
 .case1 .block-7{
@@ -242,8 +266,14 @@ p{
     padding: 120px 0 100px;
 }
 .case1 .block-7 p{
-    width: 27%;
+    width: 80%;
+    max-width: 620px;
 }
+
+/*************************************/
+/*************************************/
+/*************************************/
+
 .webp .case2 .hero{
     background: #717171 url("../assets/case2-back1.webp");
     background-size: cover;
@@ -356,19 +386,13 @@ p{
 .case2 .block-4{
     height: calc(100vw / 1.574 - 245px);
 }
-.case2 .block-4 h2, .case2 .block-4 p{
-    color:white;
-}
 .case2 .block-5{
     height: calc(100vw / 1.899 - 44px);
 }
 .case2 .block-6{
     height: calc(100vw / 1.846 - 245px);
 }
-.case2 .block-3 h2, .block-3 p{
-    color: white;
-}
-.case2 .block-6 h2, .block-6 p, .case2 .block-1 h2, .case2 .block-1 p{
+.case2 .block-6 h2, .block-6 p, .case2 .block-1 h2, .case2 .block-1 p, .case2 .block-3 h2, .block-3 p, .case2 .block-4 h2, .case2 .block-4 p{
     color: white;
 }
 .case2 .block-7{
@@ -384,4 +408,147 @@ p{
 .header .logo img{
     position: relative;
     bottom: 5px;
+}
+@media (max-width: 1800px) {
+    .about img{
+        width: 42vw;
+    }
+    .block-head h2{
+        width: 25vw;
+    }
+    .webp .case1 .block-1{
+        background: #BAF191 url("../assets/case1-block1.webp") top no-repeat;
+        background-size: 100%;
+    }
+    .no-webp .case1 .block-1{
+        background: #BAF191 url("../assets/case1-block1.png") top no-repeat;
+        background-size: 100%;
+    }
+    .case1 .block-1{
+        height: calc(100vw / 4 );
+    }
+}
+@media (max-width: 1400px) {
+    .about picture{
+        display: none;
+    }
+    .about-card h2{
+        width: 20vw;
+    }
+    .about-card p{
+        width: 60vw;
+    }
+}
+@media (max-width: 1200px) {
+    .hero-right h1{
+        font-size: 49px;
+    }
+}
+@media (max-width: 1000px) {
+    .hero-right h1{
+        font-size: 40px;
+    }
+    .about-card h2{
+        width: 20%;
+    }
+    .about-card p{
+        width: 70%;
+    }
+}
+@media (max-width: 900px) {
+    .hero{
+        height: max-content;
+    }
+    .hero-right h1{
+        font-size: 18px;
+    }
+    .hero-right h3{
+        font-size: 13px;
+    }
+    .hero-left{
+        width: 100%;
+        align-items: flex-end;
+        margin-top: 130px;
+        justify-content: center;
+    }
+    .hero-left picture{
+        max-width: 600px;
+    }
+    .hero-left img{
+        padding: 0;
+    }
+    .hero-right{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .case1 .about picture, .block-head br{
+        display: none;
+    }
+    .about{
+        padding: 30px 15px;
+    }
+    .about-card, .block-head, .hero{
+        flex-wrap: wrap;
+    }
+    .about-card h2{
+        width: 100%;
+        margin: 7px 0;
+    }
+    .about-card p{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .case1 .color span{
+        margin-right: 20px;
+    }
+    .block-head h2{
+        width: 100%;
+        line-height: 24px;
+        font-size: 18px;
+    }
+    .block-head p{
+        width: 100%;
+        line-height: 18px;
+        font-size: 12px;
+    }
+    .block{
+        padding: 30px 15px;
+    }
+    .webp .case1 .block-1{
+        background: #BAF191 url("../assets/case1-block1.webp") bottom no-repeat;
+        background-size: 100%;
+    }
+    .no-webp .case1 .block-1{
+        background: #BAF191 url("../assets/case1-block1.png") bottom no-repeat;
+        background-size: 100%;
+    }
+    .case1 .block-1 {
+        height: calc(100vw / 1.7 + 90px);
+    }
+    .case1 .block-3{
+        height: calc(100vw / 1.6806);
+    }
+    .case1 .block-5{
+        height: calc(100vw / 2.021 - 60px);
+    }
+    .block-head{
+        display: flex;
+        padding-bottom: 15px;
+    }
+    .case1 .block-7{
+        padding: 40px 0;
+    }
+    .case1 .block-7 p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px){
+    .header {
+        padding: 15px ;
+        width: calc(100% - 30px);
+    }
+    .hero-left{
+        margin-top: 70px;
+    }
 }
