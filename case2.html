@@ -6,23 +6,29 @@
     <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/case.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&amp;subset=cyrillic" rel="stylesheet">
     <script type="text/javascript" src="js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 </head>
 <body class="case2">
-    <div class="header">
-        <div class="logo" onclick="revapi32.revshowslide(1);">
-            Деловые сети
-        </div>
-        <div class="header-right" id="header-right">
-            <div class="tel">+7 800 551 29 70</div>
-            <div class="menuFive" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<div class="header" id="header">
+    <div class="logo" onclick="revapi32.revshowslide(1);" id="logo">
+        <svg width="42" height="48" viewBox="0 0 42 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
+            <path d="M36.957 5.8947V2.33195H2.48893V45.6032H36.957V36.7287H39.1272V47.8704H0.254883V0.129517H39.1272V5.8947H36.957Z" fill="white"/>
+            <path d="M20.4249 11.5951L17.8078 31.1579H23.6164L23.361 33.2955H12.8291V38.672H10.5312V31.1579H15.3185L17.9993 9.3927H26.6164L26.2972 11.5951H20.4249Z" fill="white"/>
+            <path d="M41.6164 32.7773C40.4675 33.1011 39.2547 33.2955 37.9782 33.2955C35.7441 33.2955 33.7016 32.7773 31.8505 31.7408C30.0633 30.7044 28.5952 29.2793 27.5739 27.4655C26.5526 25.6518 26.042 23.5789 26.042 21.3117C26.042 19.0445 26.5526 17.0364 27.5739 15.1578C28.5952 13.3441 29.9994 11.919 31.8505 10.8825C33.7016 9.8461 35.7441 9.32788 37.9782 9.32788C39.2547 9.32788 40.4037 9.52221 41.5526 9.8461L41.2335 12.0485C40.276 11.7246 39.1909 11.5303 38.042 11.5303C36.2547 11.5303 34.5952 11.9838 33.1271 12.8259C31.659 13.668 30.5101 14.834 29.6803 16.3238C28.8505 17.8137 28.4037 19.4331 28.4037 21.3117C28.4037 23.1254 28.7867 24.8097 29.6803 26.2995C30.5101 27.7894 31.659 28.9554 33.1271 29.7975C34.5952 30.6396 36.2547 31.0931 38.042 31.0931C39.1909 31.0931 40.276 30.8987 41.2335 30.5748L41.6164 32.7773Z" fill="white"/>
+        </svg>
+        <span>Деловые сети</span>
+    </div>
+    <div class="header-right" id="header-right">
+        <div class="tel" id="tel">+7 800 551 29 70</div>
+        <div class="menuFive" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
+</div>
     <div class="menu-mask" id="menu">
         <div class="menu">
             <div class="menu-item"><a href="#">о студии</a></div>
@@ -32,14 +38,10 @@
         </div>
     </div>
     <div class="footer">
-        <div class="mouse">
-            <img src="assets/72eb0-mouse.png" alt="">
-        </div>
-        <div class="support">
-            <img src="assets/5836c-support.png" alt="">
+        <div class="support" id="support">
+            <img src="assets/support.png" alt="">
         </div>
     </div>
-
     <div class="hero">
         <div class="hero-left">
 
@@ -93,6 +95,9 @@
             <h2>Прототипы</h2>
             <p>Прототипы для будущего сайта были утверждены с первого раза, благодаря качественному брифованию.</p>
         </div>
+        <div class="block-body">
+            <img src="assets/case2-block1.png" alt="">
+        </div>
     </div>
     <div class="block block-2">
         <div class="block-head">
@@ -100,6 +105,9 @@
             <p>
                 Перечень услуг идет совместно с инфографикой для простоты восприятия. При наведении на услуги и на преимущества появляется более подробное их описание.
             </p>
+        </div>
+        <div class="block-body">
+            <img src="assets/case2-block2.png" alt="">
         </div>
     </div>
     <div class="block block-3">
@@ -109,6 +117,9 @@
                 Показываем проделанные работы, используя интересные прием склейки фотографий до/после.
             </p>
         </div>
+        <div class="block-body">
+            <img src="assets/case2-block3.png" alt="">
+        </div>
     </div>
     <div class="block block-4">
         <div class="block-head">
@@ -116,6 +127,9 @@
             <p>
                 Создали блок с возможностью отправить фото автомобиля для предварительной оценки. В блоке с ценами удалось не перегрузить сайт длинной таблицей, пользователь выбирает интересующую его услугу и, в соответствии с ней, выдается необходимая информация.
             </p>
+        </div>
+        <div class="block-body">
+            <img src="assets/case2-block4.png" alt="">
         </div>
     </div>
     <div class="block block-5">
@@ -125,6 +139,9 @@
                 Спроектировали дополнительные страницы со списком всех работ, подробной статьей по каждому ремонту.
             </p>
         </div>
+        <div class="block-body">
+            <img src="assets/case2-block5.png" alt="">
+        </div>
     </div>
     <div class="block block-6">
         <div class="block-head">
@@ -132,6 +149,9 @@
             <p>
                 Под мобильные устройства переоформили некоторые блоки для удобства пользователя и с учетом особенностей интерфейса.
             </p>
+        </div>
+        <div class="block-body">
+            <img src="assets/case2-block6.png" alt="">
         </div>
     </div>
     <div class="block-7">
