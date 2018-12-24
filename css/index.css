@@ -1,15 +1,3 @@
-@font-face{
-    font-family: 'Montserrat';
-    src: url('https://xn----ctbfebbvt1a7am7h.xn--p1ai/fonts/Montserrat-Light.ttf');
-    font-weight: 300;
-    font-style: normal;
-}
-@font-face{
-    font-family: 'Montserrat';
-    src: url('https://xn----ctbfebbvt1a7am7h.xn--p1ai/fonts/Montserrat-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
 body {
     margin: 0;
 }
@@ -68,7 +56,7 @@ body.index {
     cursor: pointer;
 }
 
-.header-right.active .tel {
+.header-right.active .tel a {
     color: #555555 !important;
 }
 
@@ -535,10 +523,11 @@ body.index {
     }
 }
 
-#mocap1 img {
+#mocap1 img, #mocap3 img {
     animation: image1 0.9s;
     top:25% !important;
     height: 50% !important;
+    max-height: 429px;
 }
 
 #mocap1 img:nth-child(2) {
@@ -568,7 +557,6 @@ body.index {
 #mocap2 img:nth-child(3) {
     animation: image2 1.3s;
 }
-
 .mocap img {
     width: auto !important;
     position: absolute;
@@ -764,7 +752,6 @@ body.index {
 .request-left {
     width: 38%;
     margin-right: 5%;
-    margin-left: 100px;
 }
 
 .request-left h3 {
@@ -777,6 +764,7 @@ body.index {
     max-width: 620px;
     margin-top: 0;
     margin-bottom: 10px;
+    transition: all 0.5s;
 }
 
 .request-left h3 a{
@@ -792,6 +780,7 @@ body.index {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
+    transition: all 0.5s;
 }
 
 .request-left h2 {
@@ -807,8 +796,9 @@ body.index {
 }
 
 .request-right{
-
+    width: 33%;
     margin-left: 10px;
+    transition: all 0.5s;
 }
  span {
     line-height: normal;
@@ -817,6 +807,10 @@ body.index {
 
 .request-right span a,.request-right span a:visited{
     color:white;
+}
+#form-img{
+    display: none;
+    justify-content: center;
 }
  form {
     width: 80%;
@@ -1082,7 +1076,9 @@ input:-webkit-autofill:active {
     color: #555555;
     text-align: center;
 }
-
+#jGrowl{
+    display: none;
+}
 .error_name,.error{
     height: 20px;
 }
@@ -1126,13 +1122,13 @@ input:-webkit-autofill:active {
         width: 50%;
     }
     .request-right form{
-        width: 70%;
+        width: 90%;
     }
     .case-slider h2{
         font-size: 50px;
     }
     .request-left, .request-right{
-        margin: 0;
+        margin: 0 40px;
     }
 }
 
@@ -1211,9 +1207,12 @@ input:-webkit-autofill:active {
     }
     .case-slider h2{
         font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
     }
     .case-slider h3{
         font-size: 16px;
+        text-align: center;
     }
     .case-slider input{
         margin-bottom: 20px;
@@ -1237,7 +1236,7 @@ input:-webkit-autofill:active {
     .mocap{
         width: 100%;
     }
-    #mocap1 img{
+    #mocap1 img, #mocap3 img{
         width: 90% !important;
         height: auto !important;
         max-width: calc(100vh - 320px) !important;
@@ -1247,22 +1246,58 @@ input:-webkit-autofill:active {
     }
     .mocap.active{
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
     }
     .mouse.change{
         opacity: 0;
         transition: opacity 0.2s;
     }
-
     #support{
         display: none;
     }
     #support-m{
         display: block;
     }
-}
 
-@media (max-width: 768px) {
+    .mocap{
+        height: 200px;
+        align-items: flex-end;
+    }
+    @keyframes image2 {
+        from {
+            left: -50%;
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.4;
+        }
+        to {
+            left: -9%;
+            opacity: 1;
+        }
+    }
+    #mocap1 img:nth-child(2), #mocap2 img:nth-child(1), #mocap2 img:nth-child(2){
+        display: none;
+        animation: image2 1s;
+    }
+    #mocap2.active img{
+        left: -9%;
+        width: auto !important;
+        height: 110% !important;
+        margin-bottom: -10%;
+        max-height: calc(100vh - 360px);
+    }
+    .slider-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+    .slider-right .slider-control{
+        justify-content: center;
+    }
     .control-left:hover, .control-right:hover{
         box-shadow: none;
     }
@@ -1271,6 +1306,20 @@ input:-webkit-autofill:active {
     }
     .slider-right .link{
         justify-content: center;
+    }
+    form input, form button{
+        font-size: 13px;
+    }
+    .modal-form form input{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .case-slider h2{
+        font-size: 18px;
+    }
+    .case-slider h3{
+        font-size: 13px;
     }
     .request-right form {
         width: calc(100% - 30px);
@@ -1313,53 +1362,6 @@ input:-webkit-autofill:active {
     .service-card.visible .service-text{
         height: 70px;
     }
-    .mocap{
-        height: 200px;
-        align-items: flex-end;
-    }
-    @keyframes image2 {
-        from {
-            left: -50%;
-            opacity: 0;
-        }
-        50% {
-            opacity: 0.4;
-        }
-        to {
-            left: -9%;
-            opacity: 1;
-        }
-    }
-    #mocap1 img:nth-child(2), #mocap2 img:nth-child(1), #mocap2 img:nth-child(2){
-        display: none;
-        animation: image2 1s;
-    }
-    #mocap2.active img{
-        left: -9%;
-        width: auto !important;
-        height: 110% !important;
-        margin-bottom: -10%;
-        max-height: calc(100vh - 360px);
-    }
-    .slider-right {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 100px;
-    }
-    .case-slider h2{
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .case-slider h3{
-        font-size: 13px;
-        text-align: center;
-    }
-    .slider-right .slider-control{
-        justify-content: center;
-    }
-
     .header .logo svg{
         display: block;
     }
@@ -1382,10 +1384,10 @@ input:-webkit-autofill:active {
         align-items: center;
     }
     .video{
-         display: none ;
+         display: none;
     }
 }
-@media (max-height: 700px){
+@media (max-height: 700px) and (min-width: 900px){
     .request-right form input, .request-right form button{
         margin-top: 18px;
     }

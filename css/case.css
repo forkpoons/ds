@@ -61,10 +61,14 @@
     max-width: 100%;
 }
 .hero-left img{
+    max-width: 95vw;
     padding-left: 80px;
-    height: 85vh;
-    min-height: 500px;
 }
+.case2 .hero-left img {
+     padding-left: 80px;
+     height: 85vh;
+     min-height: 500px;
+ }
 .hero-right{
     width: calc(47% - 90px);
     display: flex;
@@ -259,12 +263,14 @@ p{
 .case1 .block-6 h2, .block-6 p, .case1 .block-3 h2, .block-3 p{
     color: white;
 }
+.block-7{
+    padding: 120px 0 100px;
+ }
 .case1 .block-7{
     display: flex;
     justify-content: center;
     text-align: center;
     background: #FFEFE0;
-    padding: 120px 0 100px;
 }
 .block-7 p{
     width: 80%;
@@ -430,7 +436,11 @@ p{
     }
     .hero-left img{
         padding: 0;
+        padding-left: 0;
+    }
+    .case2 .hero-left img {
         max-width: 95%;
+        padding-left: 0;
         height: auto;
         min-height: 0;
     }
