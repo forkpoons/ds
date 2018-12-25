@@ -44,7 +44,22 @@ body.index {
     display: flex;
     justify-content: space-between;
 }
-
+.lang{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.lang a{
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.lang span:not(.active){
+    opacity: 0.5;
+}
 .header .logo {
     font-size: 23px;
     line-height: 28px;
@@ -55,7 +70,6 @@ body.index {
     text-transform: uppercase;
     cursor: pointer;
 }
-
 .header-right.active .tel a {
     color: #555555 !important;
 }
@@ -70,7 +84,7 @@ body.index {
 }
 
 .header-right {
-    width: 280px;
+    width: 370px;
     display: flex;
     justify-content: flex-end;
 }
@@ -539,7 +553,7 @@ body.index {
     opacity: 0;
     top:0;
     height: 100% !important;
-    max-width: 100%;
+    max-width: 849px;
 }
 
 #mocap2.active img {
@@ -754,16 +768,24 @@ body.index {
     margin-right: 5%;
 }
 
+.request-left p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+    color: white;
+}
 .request-left h3 {
     font-family: Montserrat, serif;
     font-style: normal;
     font-weight: 300;
-    line-height: 27px;
-    font-size: 20px;
+    line-height: 23px;
+    font-size: 16px;
     color: #FFFFFF;
     max-width: 620px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: all 0.5s;
 }
 
@@ -800,11 +822,21 @@ body.index {
     margin-left: 10px;
     transition: all 0.5s;
 }
+#modal_form_head, #send_form_m{
+    transition: all 0.5s;
+}
+#modal_form_text{
+    display: none;
+    opacity: 0;
+    transition: all 0.5s;
+}
  span {
     line-height: normal;
     font-weight: 300;
 }
-
+.error_phone span:nth-child(2){
+    display: none;
+}
 .request-right span a,.request-right span a:visited{
     color:white;
 }
@@ -824,7 +856,12 @@ body.index {
  form input:focus {
     border-bottom: 2px solid white;
 }
-
+ form input:focus.error {
+    border-bottom: 2px solid #aa0000;
+}
+span.error{
+    color: #aa0000;
+}
 form input,  form button{
     background: none;
     color: white;
@@ -838,6 +875,11 @@ form input,  form button{
     outline: none;
     font-family: Montserrat, serif;
     font-weight: 300;
+}
+form input.error{
+    border-bottom: 1px solid #aa0000;
+    margin-bottom: 10px;
+    color: #aa0000;
 }
 form button, .request-right span{
     margin-top: 30px;
@@ -875,8 +917,13 @@ form button {
 .modal-form form h2 {
     text-align: center;
 }
+.modal-form form{
+    font-size: 10px;
+    margin: auto;
+}
 .modal-form p{
-    margin: 10px 0 !important;
+    margin: 10px auto !important;
+    font-size: 12px !important;
 }
 .modal-form h2.center{
     text-align: center;
@@ -886,7 +933,7 @@ form button {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 26px;
+    font-size: 18px;
     text-transform: uppercase;
     color: #555555;
 }
@@ -897,6 +944,12 @@ form button {
     border-bottom: 1px solid #555;
     color: #555;
     margin-top: 30px;
+    font-weight: 400;
+}
+.modal-form form input.error{
+    border-bottom: 1px solid #aa0000;
+    margin-bottom: 10px;
+    color: #aa0000;
 }
 .modal-form form input:nth-child(1){
     margin-top: 5px;
@@ -908,6 +961,9 @@ form button {
 }
 .modal-form form input:focus {
     border-bottom: 2px solid #555;
+}
+.modal-form form input:focus.error {
+    border-bottom: 2px solid #aa0000;
 }
 .modal-form span a, .modal-form span a:visited{
     color:#555;
@@ -930,14 +986,14 @@ form button {
 ::-moz-placeholder{
     color: white;
 }
-:-moz-placeholder{
-    color: white;
-}
-:-ms-input-placeholder{
-    color: white;
-}
 .modal-form input::-webkit-input-placeholder{
     color: #555;
+}
+.modal-form input.error::-webkit-input-placeholder{
+    color: rgba(170, 0, 0, 0.50);
+}
+.request-right input.error::-webkit-input-placeholder{
+    color: #aa0000;
 }
 .request-right input:focus::placeholder{
     color: rgba(255,255,255,0.5);
@@ -1037,6 +1093,9 @@ input:-webkit-autofill:active {
 .modal .content{
     padding: 120px 0;
 }
+.modal-form h2, .modal-form p{
+    text-align: center;
+}
 .modal h3, .modal p{
     font-family: Montserrat, serif;
     font-style: normal;
@@ -1049,6 +1108,15 @@ input:-webkit-autofill:active {
 .modal p a{
     color:#555;
     text-decoration: none;
+}
+.modal p.inn{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #555555;
 }
 .modal h3{
     text-transform: uppercase;
@@ -1183,7 +1251,9 @@ input:-webkit-autofill:active {
 #slide-117-layer-7 .tp-parallax-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap .tp-mask-wrap{
     position: static !important;}
 @media (max-width: 900px) {
-
+    .lang{
+        display: none;
+    }
     #slide-117-layer-7 .tp-parallax-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap .tp-mask-wrap{
         overflow: visible !important;
     }
@@ -1278,7 +1348,7 @@ input:-webkit-autofill:active {
             opacity: 1;
         }
     }
-    #mocap1 img:nth-child(2), #mocap2 img:nth-child(1), #mocap2 img:nth-child(2){
+    #mocap1 img:nth-child(2), #mocap2 img:nth-child(1), #mocap2 img:nth-child(3){
         display: none;
         animation: image2 1s;
     }
@@ -1312,6 +1382,9 @@ input:-webkit-autofill:active {
     }
     .modal-form form input{
         margin-top: 10px;
+    }
+    form button:hover {
+        box-shadow: none;
     }
 }
 @media (max-width: 768px) {

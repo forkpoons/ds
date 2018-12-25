@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Rubik:500&subset=cyrillic');
 .header{
     margin: 0;
     padding: 50px 50px 16px;
@@ -63,6 +64,7 @@
 .hero-left img{
     max-width: 95vw;
     padding-left: 80px;
+    width: 100%;
 }
 .case2 .hero-left img {
      padding-left: 80px;
@@ -183,7 +185,7 @@ p{
     margin-top: 15px;
     display: block;
 }
-.case1 .color span{
+.color span{
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -286,7 +288,6 @@ p{
     background-size: cover;
 }
 .no-webp .case2 .hero{
-
     background: #717171 url("../assets/case2-back1.png");
     background-size: cover;
 }
@@ -310,13 +311,6 @@ p{
     font-size: 18px;
     margin-top: 15px;
     display: block;
-}
-.case2 .color span{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-right: 80px;
 }
 .case2 .color span:nth-child(1){
     background: #F6C119;
@@ -365,10 +359,195 @@ p{
     text-align: center;
     background: #FFEFE0;
 }
+
+/********************************/
+
+.webp .case3 .hero{
+    background: #717171 url("../assets/case3-back1.webp") center;
+    background-size: cover;
+}
+.no-webp.case3 .hero{
+    background: #717171 url("../assets/case3-back1.png") center;
+    background-size: cover;
+}
+.case3 .hero-left img{
+    width: 100%;
+}
+.case3 .about-font{
+    font-family: 'Rubik', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    color: #464646;
+}
+.case3 .about-font2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+}
+.case3 .color span:nth-child(1){
+    background: #FFB200;
+}
+.case3 .color span:nth-child(2){
+    background: #444444;
+}
+.case3 .color span:nth-child(3){
+    background: #222222;
+}
+.case3 .block-1 h2,.case3 .block-1 p, .case3 .block-3 h2,.case3 .block-3 p, .case3 .block-4 h2,.case3 .block-4 p{
+    color: white;
+}
+.webp .case3 .block-1{
+    background: #999DA0 url("../assets/case3-block1.webp") bottom no-repeat;
+    background-size: 100%;
+    height: calc(100vw / 1.897 );
+    padding-bottom: 0;
+}
+.no-webp .case3 .block-1{
+    background: #999DA0 url("../assets/case3-block1.png") bottom no-repeat;
+    background-size: 100%;
+    height: calc(100vw / 1.897);
+    padding-bottom: 0;
+}
+.case3 .block-2{
+    background: #FFB200;
+}
+.case3 .block-2 img, .case3 .block-3 img{
+    max-width: 100%;
+}
+.case3 .block-3{
+    background: #444444;
+}
+.webp .case3 .block-4{
+    background: #000 url("../assets/case3-block4.webp") right bottom no-repeat;
+    background-size: 50%;
+}
+.no-webp .case3 .block-4{
+    background: #000 url("../assets/case3-block4.png") right bottom no-repeat;
+    background-size: 50%;
+}
+.case3 .block-4 .block-body{
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 60%;
+}
+.case3 .block-4 .block-body .block-4-card h3{
+    color: white;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    font-size: 20px;
+}
+.case3 .block-4 .block-body .block-4-card{
+    width: 49%;
+    margin-right: 1%;
+}
+.case3 .block-7{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #FFE4A5;
+}
+
+/***************************/
+
+
+.webp .case4 .hero{
+    background: #717171 url("../assets/case4-back1.png") center;
+    background-size: cover;
+}
+.no-webp.case4 .hero{
+    background: #717171 url("../assets/case4-back1.png") center;
+    background-size: cover;
+}
+.case4 .hero-left img{
+    width: 100%;
+}
+.case4 .about-font{
+    font-family: 'Rubik', serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 36px;
+    color: #464646;
+}
+.case4 .about-font2{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+}
+.case4 .color span:nth-child(1){
+    background: #E8A534;
+}
+.case4 .color span:nth-child(2){
+    background: #262626;
+}
+
+.webp .case4 .block-1{
+    background: #F7D294 url("../assets/case4-block1.png") bottom no-repeat;
+    background-size: 100%;
+    height: calc(100vw / 1.897 );
+    padding-bottom: 0;
+}
+.no-webp .case4 .block-1{
+    background: #F7D294 url("../assets/case4-block1.png") bottom no-repeat;
+    background-size: 100%;
+    height: calc(100vw / 1.897);
+    padding-bottom: 0;
+}
+.case4 .block-2{
+    background: #fff url("../assets/case4-block2.png") center center no-repeat;
+    background-size: cover;
+    height: calc(100vw / 1.897);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.case4 .block-2 h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 80px;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.case4 .block-3 img{
+    width: 100%;
+}
+.case4 .block-3 h2, .case4 .block-3 p{
+    color: white;
+}
+.case4 .block-3{
+    background: #E8A534;
+}
+.case4 .block-4 img{
+    max-width: 100%;
+}
+.case4 .block-7{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #262626;
+    color: white;
+}
+/***************************/
+
 .header .logo img{
     position: relative;
     bottom: 5px;
 }
+
 @media (max-width: 1800px) {
     .about img{
         width: 42vw;
@@ -398,10 +577,16 @@ p{
     .about-card p{
         width: 60vw;
     }
+    .case3 .block-4 .block-body{
+        width: 70%;
+    }
 }
 @media (max-width: 1200px) {
     .hero-right h1{
         font-size: 49px;
+    }
+    .case3 .block-1{
+        height: calc(100vw / 1.897 + 150px) !important;
     }
 }
 @media (max-width: 1000px) {
@@ -416,6 +601,9 @@ p{
     }
 }
 @media (max-width: 900px) {
+    .case3 .block-1, .case4 .block-1{
+        height: calc(100vw / 1.897 + 100px) !important;
+    }
     .hero{
         height: max-content;
     }
@@ -466,8 +654,8 @@ p{
         width: 100%;
         margin: 10px 0;
     }
-    .case1 .color span, .case2 .color span{
-        margin-right: 20px;
+    .color span{
+        margin-right: 20px !important;
     }
     .block-head h2{
         width: 100%;
@@ -483,7 +671,7 @@ p{
         padding: 30px 15px;
     }
 
-    .case2 .block-5 .block-body img, .case2 .block-1 .block-body img{
+    .case2 .block-5 .block-body img, .case2 .block-1 .block-body img, .case3 .block-1 .block-body img{
         width: calc(100% + 30px);
     }
     .webp .case1 .block-1{
@@ -503,6 +691,15 @@ p{
     .case1 .block-5{
         height: calc(100vw / 2.021 - 60px);
     }
+    .case3 .block-4{
+        background: #000;
+    }
+    .case3 .block-4 .block-body{
+        width: 100%;
+    }
+    .case3 .block-4 .block-body .block-4-card{
+        width: 100%;
+    }
     .block-head{
         display: flex;
         padding-bottom: 15px;
@@ -512,6 +709,9 @@ p{
     }
     .block-7 p{
         font-size: 12px;
+    }
+    .case4 .block-2{
+        display: none;
     }
 }
 @media (max-width: 768px){

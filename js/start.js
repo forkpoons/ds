@@ -1,8 +1,10 @@
 let revapi32,
     tpj;
 (function() {
-    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad); else onLoad();
-
+    if (!/loaded|interactive|complete/.test(document.readyState))
+        document.addEventListener("DOMContentLoaded",onLoad);
+    else
+        onLoad();
     function onLoad() {
         if (tpj===undefined) { tpj = jQuery; if("on" === "on") tpj.noConflict();}
         if(tpj("#rev_slider_32_1").revolution === undefined){
@@ -103,6 +105,7 @@ let revapi32,
                     nextSlideOnWindowFocus:"off",
                     disableFocusListener:false,
                 }
+
             });
         } /* END OF revapi call */
         let ExplodingLayersAddOn;
@@ -115,9 +118,12 @@ let revapi32,
             document.querySelector('.mouse').classList.add("change");
             sl = 1;
         });
+        revapi32.bind("revolution.slide.onloaded",function (e) {
+            setTimeout(function () { document.getElementById('preload').classList.add('hide'); }, 100);
+            setTimeout(function () { document.getElementById('preload').classList.add('none'); }, 2000);
+        });
     }
     /* END OF ON LOAD FUNCTION */
-
 }()); /* END OF WRAPPING FUNCTION */
 
 
@@ -128,7 +134,7 @@ let slide = 1;
 let slide_length = document.querySelector('.case-slider').getElementsByTagName("span").length;
 
 function slider(a) {
-    document.getElementById("home" + slide).classList.toggle("active");
+    document.getElementById("home" + slide).inn
     document.getElementById("mocap" + slide).classList.toggle("active");
     document.getElementById("link" + slide).classList.toggle("active");
     if (a){
