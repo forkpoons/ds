@@ -124,6 +124,7 @@ let revapi32,
         });
     }
     /* END OF ON LOAD FUNCTION */
+
 }()); /* END OF WRAPPING FUNCTION */
 
 
@@ -134,7 +135,7 @@ let slide = 1;
 let slide_length = document.querySelector('.case-slider').getElementsByTagName("span").length;
 
 function slider(a) {
-    document.getElementById("home" + slide).inn
+    document.getElementById("home" + slide).classList.toggle("active");
     document.getElementById("mocap" + slide).classList.toggle("active");
     document.getElementById("link" + slide).classList.toggle("active");
     if (a){
