@@ -63,11 +63,11 @@
 }
 .hero-left img{
     max-width: 95vw;
-    padding-left: 80px;
     width: 100%;
 }
 .case2 .hero-left img {
      padding-left: 80px;
+    width: auto;
      height: 85vh;
      min-height: 500px;
  }

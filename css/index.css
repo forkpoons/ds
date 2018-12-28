@@ -504,9 +504,10 @@ body.index {
 }
 
 .mocap.active {
-    display: block;
+    display: flex;
     animation: hom 1s;
     animation-direction: revert;
+    align-items: center;
 }
 
 @keyframes image1 {
@@ -536,14 +537,28 @@ body.index {
         opacity: 1;
     }
 }
+@keyframes image3 {
+    from {
+        left: 50%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        left: 0%;
+        opacity: 1;
+    }
+}
 
 #mocap1 img, #mocap3 img, #mocap4 img {
     animation: image1 0.9s;
-    top:25% !important;
     height: 50% !important;
     max-height: 429px;
 }
-
+#mocap3 img, #mocap4 img {
+    max-height: 368px;
+}
 #mocap1 img:nth-child(2) {
     animation: image1 1.1s;
 }
@@ -551,9 +566,8 @@ body.index {
 #mocap2 img {
     right: 50%!important;
     opacity: 0;
-    top:0;
     height: 100% !important;
-    max-width: 849px;
+    max-height: 730px;
 }
 
 #mocap2.active img {
@@ -597,7 +611,7 @@ body.index {
     margin-bottom: 40px !important;
 }
 
-.case-slider input:active {
+.case-slider button:active {
     box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
     background: white;
     color: #555555;
@@ -605,14 +619,20 @@ body.index {
     padding: 12px 25px;
 }
 
-.case-slider input:hover {
+.case-slider button:hover {
     background: white;
     color: #555555;
     border: none;
     padding: 12px 25px;
 }
+.case-slider button:hover path{
+    fill: #555;
+}
 
-.case-slider input {
+.case-slider button svg{
+    margin-left: 10px;
+}
+.case-slider button {
     font-family: Montserrat, serif;
     color: white;
     background: none;
@@ -627,6 +647,16 @@ body.index {
 
 .slider-right {
     width: calc(50% - 150px);
+    left:0;
+    position: relative;
+    animation: image3 1.1s;
+    opacity: 1;
+    display: block;
+}
+.slider-right.animation{
+    left:50%;
+    display: none;
+    opacity: 0;
 }
 .slider-right .slider-control {
     display: flex;
@@ -767,14 +797,35 @@ body.index {
     width: 38%;
     margin-right: 5%;
 }
+.request-left .request-mask:nth-child(2){
 
+    margin-top: 30px;
+}
+.request-left .request-mask:nth-child(3){
+    margin-top: 90px;
+}
+.request-left .request-mask:nth-child(4){
+    margin-top: 30px;
+}
+.request-left .request-mask:nth-child(5){
+    margin-top: 10px;
+}
+.request-left .request-mask h1,.request-left .request-mask h2,.request-left .request-mask h3,.request-left .request-mask p{
+    position: relative;
+    top:80px;
+    transition: all 0.7s;
+}
+.request-left .request-mask.active h1,.request-left .request-mask.active h2,.request-left .request-mask.active h3,.request-left .request-mask.active p{
+    top:0;
+}
 .request-left p {
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     font-style: normal;
     font-weight: 300;
     line-height: 20px;
     font-size: 14px;
     color: white;
+    margin: 0;
 }
 .request-left h3 {
     font-family: Montserrat, serif;
@@ -784,8 +835,7 @@ body.index {
     font-size: 16px;
     color: #FFFFFF;
     max-width: 620px;
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin: 0;
     transition: all 0.5s;
 }
 
@@ -801,8 +851,8 @@ body.index {
     font-size: 60px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 20px;
     transition: all 0.5s;
+    margin: 0;
 }
 
 .request-left h2 {
@@ -813,14 +863,30 @@ body.index {
     font-size: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin-bottom: 30px;
-    margin-top: 90px;
+    margin: 0;
 }
 
 .request-right{
     width: 33%;
     margin-left: 10px;
     transition: all 0.5s;
+}
+.request-mask{
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    margin-top: 60px;
+}
+.request-right .request-mask:nth-last-child(1), .request-right .request-mask:nth-last-child(2){
+    margin-top: 20px;
+}
+.request-mask input, .request-mask button, .request-mask span{
+    position: relative;
+    top:60px;
+    transition: all 0.7s;
+}
+.request-mask.active input, .request-mask.active button, .request-mask.active span{
+    top:0;
 }
 #modal_form_head, #send_form_m{
     transition: all 0.5s;
@@ -871,18 +937,15 @@ form input,  form button{
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
-    margin-top: 60px;
     outline: none;
     font-family: Montserrat, serif;
     font-weight: 300;
+    top:0;
 }
 form input.error{
     border-bottom: 1px solid #aa0000;
     margin-bottom: 10px;
     color: #aa0000;
-}
-form button, .request-right span{
-    margin-top: 30px;
 }
 #slide-119-layer-1.tp-caption {
     white-space: normal !important;
@@ -1110,7 +1173,7 @@ input:-webkit-autofill:active {
     text-decoration: none;
 }
 .modal p.inn{
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     font-style: normal;
     font-weight: normal;
     line-height: 20px;
@@ -1159,11 +1222,14 @@ input:-webkit-autofill:active {
 @media (max-width: 1600px) {
     .h1-main {
         font-size: 50px !important;
-
         line-height: normal !important;
     }
     .request-left h1{
         font-size: 52px;
+        line-height: normal;
+    }
+    .request-left .request-mask:nth-child(1){
+        height: 60px;
     }
 }
 @media (max-width: 1400px) {
@@ -1175,13 +1241,16 @@ input:-webkit-autofill:active {
         font-size: 40px !important;
     }
     .service-head{
-        font-size: 20px;
+        font-size: 19px;
     }
     #slide-109-layer-40, #slide-109-layer-37{
         width: 250px !important;
     }
     .request-left h1{
         font-size: 42px;
+    }
+    .request-left h2{
+        font-size: 20px;
     }
     .mocap{
         width: 50%;
@@ -1212,6 +1281,10 @@ input:-webkit-autofill:active {
     }
     .case-slider h3{
         font-size: 18px;
+    }
+    .request-left .request-mask:nth-child(2) {
+        height: 70px;
+        margin-top: 15px;
     }
 }
 
@@ -1284,7 +1357,7 @@ input:-webkit-autofill:active {
         font-size: 16px;
         text-align: center;
     }
-    .case-slider input{
+    .case-slider button{
         margin-bottom: 20px;
     }
     .case-slider{
@@ -1371,7 +1444,7 @@ input:-webkit-autofill:active {
     .control-left:hover, .control-right:hover{
         box-shadow: none;
     }
-    .case-slider input{
+    .case-slider button{
         width: 100%;
     }
     .slider-right .link{
@@ -1461,15 +1534,14 @@ input:-webkit-autofill:active {
     }
 }
 @media (max-height: 700px) and (min-width: 900px){
-    .request-right form input, .request-right form button{
+    .request-right .request-mask{
         margin-top: 18px;
     }
-    .request-left h1{
-        margin-bottom: 0;
+    .request-left .request-mask:nth-child(2){
+        margin-top: 0;
     }
-    .request-left h2{
+    .request-left .request-mask:nth-child(3){
         margin-top: 40px;
-        margin-bottom: 10px;
     }
     .service-head{
         font-size: 16px;
