@@ -4,7 +4,6 @@ body {
 
 body.index {
     width: 100vw;
-    height: 100vh;
     overflow: hidden;
     background: url("https://xn----ctbfebbvt1a7am7h.xn--p1ai/assets/rain.jpg");
     background-size: cover;
@@ -118,7 +117,9 @@ body.index {
     font-size: 60px;
     line-height: 80px !important;
 }
-
+.h1-main p{
+    margin: 0;
+}
 .h3-main {
     margin-top: 20px;
     font-size: 20px !important;
@@ -186,7 +187,7 @@ body.index {
     width: 47.4%;
 }
 
-.menu-mask .menu .menu-item:nth-last-child(4) {
+.menu-mask .menu .menu-item:first-child {
     margin-top: 0;
 }
 
@@ -194,6 +195,10 @@ body.index {
     margin-left: 100px;
     margin-top: 30px;
     width: 200px;
+}
+
+.menu-item.contact-m{
+    display: none;
 }
 
 .menu-mask .menu .menu-item a, .menu-mask .menu .menu-item a:hover, .menu-mask .menu .menu-item a:visited {
@@ -1038,6 +1043,7 @@ form button {
 }
 .modal-form form span{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .tp-parallax-wrap{
     z-index: 99 !important;
@@ -1070,7 +1076,7 @@ form button {
 }
 
 .support img{
-    width: 48px;
+    width: 64px;
 }
 #support-m{
     display: none;
@@ -1327,6 +1333,13 @@ input:-webkit-autofill:active {
     .lang{
         display: none;
     }
+
+    .menu-item.contact{
+        display: none;
+    }
+    .menu-item.contact-m{
+        display: block;
+    }
     #slide-117-layer-7 .tp-parallax-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap, #slide-117-layer-7 .tp-parallax-wrap .tp-loop-wrap .tp-mask-wrap{
         overflow: visible !important;
     }
@@ -1461,6 +1474,8 @@ input:-webkit-autofill:active {
     }
 }
 @media (max-width: 768px) {
+
+
     .case-slider h2{
         font-size: 18px;
     }
@@ -1531,6 +1546,11 @@ input:-webkit-autofill:active {
     }
     .video{
          display: none;
+    }
+}
+@media (max-width: 350px) {
+    .h1-main {
+        font-size: 28px !important;
     }
 }
 @media (max-height: 700px) and (min-width: 900px){

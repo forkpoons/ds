@@ -37,6 +37,26 @@ body{
     font-size: 20px;
     font-weight: 300;
 }
+
+@keyframes a {
+    from {
+        transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg) scale(0.9);
+    }
+    50%{
+        transform: rotateX(30deg) rotateY(360deg) rotateZ(10deg) scale(1.1);
+    }
+    to {
+        transform: rotateX(10deg) rotateY(720deg) rotateZ(0deg) scale(0.9);
+    }
+}
+
+.main4-img picture:nth-child(2) img{
+    animation: a 18s infinite linear;
+}
+
+.header .tel{
+    color: white;
+}
 .main4 .button4{
     display: flex;
     margin-top: 40px;

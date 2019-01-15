@@ -8,6 +8,14 @@
 }
 .header a,.header a:hover,.header a:visited{
     color:#fff;
+    text-decoration: none;
+}
+.header .logo a{
+    display: flex;
+    align-items: center;
+}
+.header .logo a:nth-child(1){
+    margin-right: 25px;
 }
 .header .logo {
     display: flex;
@@ -33,6 +41,16 @@
 .support{
     opacity: 0.5;
     transition: opacity 0.2s;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.support svg{
+    transform: rotate(-90deg) translateX(2px) scale(3);
 }
 .support:hover{
     opacity: 1;
@@ -66,11 +84,11 @@
     width: 100%;
 }
 .case2 .hero-left img {
-     padding-left: 80px;
+    padding-left: 80px;
     width: auto;
-     height: 85vh;
-     min-height: 500px;
- }
+    height: 85vh;
+    min-height: 500px;
+}
 .hero-right{
     width: calc(47% - 90px);
     display: flex;
@@ -91,7 +109,6 @@
     font-size: 60px;
 }
 .hero-right h3{
-    text-transform: uppercase;
     font-size: 20px;
 }
 p{
@@ -123,7 +140,7 @@ p{
     font-family: Montserrat, serif;
     font-style: normal;
     font-weight: normal;
-    line-height: normal;
+    line-height: 1.5;
     font-size: 16px;
     margin: 8px 0 0;
 }
@@ -251,7 +268,7 @@ p{
 .case1 .block-5{
     height: calc(100vw / 2.021 - 245px);
 }
- .block-body{
+.block-body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -267,7 +284,7 @@ p{
 }
 .block-7{
     padding: 120px 0 100px;
- }
+}
 .case1 .block-7{
     display: flex;
     justify-content: center;
@@ -277,6 +294,24 @@ p{
 .block-7 p{
     width: 80%;
     max-width: 620px;
+}
+.block-8{
+    width: 100%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+    padding: 120px 0;
+}
+.block-8 a{
+    padding: 12px 28px;
+    color: white;
+    text-decoration: none;
+}
+.case1 .block-8 a{
+    background: #53cb59;
 }
 
 /*************************************/
@@ -324,6 +359,9 @@ p{
 .case2 .block-1 {
     background: #4F4F4F;
 }
+.case2 .block-1 .block-body{
+    margin-top: -200px;
+}
 .webp .case2 .block-3 {
     background: #ffefe0 url("../assets/case2-back1.webp") bottom no-repeat;
     background-size: cover;
@@ -345,7 +383,7 @@ p{
     background: rgba(255, 200, 27, 0.51);
 }
 .case2 .block-5 {
-    background: #ffefe0;
+    background: #fff;
 }
 .case2 .block-6 {
     background: #F6C119
@@ -360,13 +398,16 @@ p{
     background: #FFEFE0;
 }
 
+.case2 .block-8 a{
+    background: #F6C119;
+}
 /********************************/
 
 .webp .case3 .hero{
     background: #717171 url("../assets/case3-back1.webp") center;
     background-size: cover;
 }
-.no-webp.case3 .hero{
+.no-webp .case3 .hero{
     background: #717171 url("../assets/case3-back1.png") center;
     background-size: cover;
 }
@@ -455,14 +496,17 @@ p{
     background: #FFE4A5;
 }
 
+.case3 .block-8 a{
+    background: #FFB200;
+}
 /***************************/
 
 
 .webp .case4 .hero{
-    background: #717171 url("../assets/case4-back1.png") center;
+    background: #717171 url("../assets/case4-back1.webp") center;
     background-size: cover;
 }
-.no-webp.case4 .hero{
+.no-webp .case4 .hero{
     background: #717171 url("../assets/case4-back1.png") center;
     background-size: cover;
 }
@@ -494,7 +538,7 @@ p{
 }
 
 .webp .case4 .block-1{
-    background: #F7D294 url("../assets/case4-block1.png") bottom no-repeat;
+    background: #F7D294 url("../assets/case4-block1.webp") bottom no-repeat;
     background-size: 100%;
     height: calc(100vw / 1.897 );
     padding-bottom: 0;
@@ -505,16 +549,23 @@ p{
     height: calc(100vw / 1.897);
     padding-bottom: 0;
 }
-.case4 .block-2{
+
+.webp .case4 .block-2{
+    background: #fff url("../assets/case4-block2.webp") center center no-repeat;
+    background-size: cover;
+}
+.no-webp .case4 .block-2{
     background: #fff url("../assets/case4-block2.png") center center no-repeat;
     background-size: cover;
+}
+.case4 .block-2{
     height: calc(100vw / 1.897);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .case4 .block-2 h2{
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     font-style: normal;
     font-weight: normal;
     line-height: 80px;
@@ -541,6 +592,10 @@ p{
     background: #262626;
     color: white;
 }
+
+.case4 .block-8 a{
+    background: #E8A534;
+}
 /***************************/
 
 .header .logo img{
@@ -566,6 +621,9 @@ p{
     .case1 .block-1{
         height: calc(100vw / 4 );
     }
+    .case2 .block-1 .block-body{
+        margin-top: -150px;
+    }
 }
 @media (max-width: 1400px) {
     .about picture{
@@ -579,6 +637,9 @@ p{
     }
     .case3 .block-4 .block-body{
         width: 70%;
+    }
+    .case2 .block-1 .block-body{
+        margin-top: -50px;
     }
 }
 @media (max-width: 1200px) {
@@ -631,6 +692,9 @@ p{
         padding-left: 0;
         height: auto;
         min-height: 0;
+    }
+    .case2 .block-1 .block-body{
+        margin-top: 0;
     }
     .hero-right{
         width: 100%;
@@ -704,7 +768,7 @@ p{
         display: flex;
         padding-bottom: 15px;
     }
-    .block-7{
+    .block-7, .block-8{
         padding: 40px 0;
     }
     .block-7 p{
