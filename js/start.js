@@ -63,7 +63,7 @@ let revapi32,
                 navigation: {
                     keyboardNavigation: "on",
                     keyboard_direction: "vertical",
-                    mouseScrollNavigation: "carousel",
+                    mouseScrollNavigation: "on",
                     mouseScrollReverse: "default",
                     onHoverStop: "on",
                     touch: {
@@ -73,8 +73,7 @@ let revapi32,
                         swipe_min_touches: 1,
                         swipe_direction: "vertical",
                         drag_block_vertical: false
-                    }
-                    ,
+                    },
                     tabs: {
                         style: "metis",
                         enable: true,
@@ -143,13 +142,25 @@ let revapi32,
         revapi32.bind("revolution.slide.onbeforeswap", function (e, data) {
             if (sl === 1) {
                 document.querySelector('.mouse').classList.add("change");
+                if(data.currentslide["0"].id === 'slide4' && data.nextslide["0"].id === 'slide1')
+                    data.nextslide = data.currentslide;
             }
             sl = 1;
+
             if (data.nextslide["0"].id === 'slide3') {
                 animation_slide3(slide);
             } else if (data.nextslide["0"].id === 'slide4') {
                 animation_slide4();
             }
+        });
+
+        revapi32.bind("revolution.slide.layeraction",function (e, data) {
+
+            console.log(data.eventtype);
+            //data.eventtype - Действия слоя (enterstage, enteredstage, leavestage, leftstage)
+            //data.layertype - Тип слоя (image,video,html)
+            //data.layersettings - Стандартные настройки для Слоя
+            //data.layer - Слой как объект jQuery
         });
         revapi32.bind("revolution.slide.onloaded", function (e) {
             setTimeout(function () {
@@ -158,9 +169,9 @@ let revapi32,
             setTimeout(function () {
                 document.getElementById('preload').classList.add('none');
             }, 1000);
+            sl = 2;
         });
     }
-
     /* END OF ON LOAD FUNCTION */
 }()); /* END OF WRAPPING FUNCTION */
 
@@ -175,6 +186,10 @@ function animation_slide3(slides) {
             document.getElementById('slider-right').classList.remove('animation');
         }, 300);
 }
+
+
+
+
 
 function animation_slide4() {
     let masks_l = document.querySelector('.request-left').querySelectorAll('.request-mask');

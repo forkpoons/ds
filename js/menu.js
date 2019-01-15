@@ -55,6 +55,7 @@ function modal(open) {
     if (open) {
         document.getElementById('modal').classList.add('active');
         document.getElementById('modal').classList.add('visible');
+
     }
     else {
         document.getElementById('modal').classList.remove('visible');
