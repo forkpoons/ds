@@ -34,12 +34,12 @@
 
 <body style="margin: 0; padding: 0" class="index" id="body">
 <div class="preload" id="preload"><img src="assets/preload.svg" alt=""> </div>
-<div class="video" id="video"><div>
+<!--<div class="video" id="video"><div>
 <video autoplay muted loop id="myVideo" style="position:fixed">
     <source src="assets/rain.mp4" type="video/mp4">
     <source src="assets/rain.webm" type="video/webm">
     <source src="assets/rain.ogv" type="video/ogg">
-</video></div></div>
+</video></div></div>-->
 <div id="rev_slider_32_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="delovie-seti"
      data-source="gallery" style="background:transparent;padding:0;">
     <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
@@ -170,7 +170,7 @@
             <li data-index="rs-109" data-transition="fade" data-slotamount="default" data-hideafterloop="0"
                 data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="1500"
                 data-thumb="assets/transparent.png" data-rotate="0" data-saveperformance="off" data-title="Услуги"
-                data-param1="02" id="slide-2">
+                data-param1="02" id="slide2">
                 <!-- MAIN IMAGE -->
                 <img src="assets/transparent.png" data-bgcolor='rgba(88, 76, 217, 0.5)'
                      style='background:rgba(88, 76, 217, 0.5)' alt="" data-bgposition="center center" data-bgfit="cover"
@@ -178,120 +178,79 @@
                 <!-- LAYER NR. 14 -->
                 <div class="tp-caption rev_group"
                      id="slide-109-layer-37"
-                     data-x="['center','center','center','left']" data-hoffset="['-385','-270','-120','15']"
-                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                     data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                     data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
                      data-type="group"
                      data-responsive_offset="off"
-                     data-frames='[{"delay":1080,"speed":700,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                     data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"opacity:1;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                      style="z-index: 11; min-width: 300px; max-width: none !important; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0;">
                     <!-- LAYER NR. 15 -->
-                    <div class="service-card" id="service-card1" onclick="service(this)">
-                        <div class="service-head">
-                            брендинг
+                    <div class="service-main" id="service-main">
+                        <div class="service-left-mask">
+                            <div class="service-left">
+                                <div class="service-card" id="service-card1" onclick="service(this)">
+                                    <div class="service-head">
+                                        брендинг
+                                    </div>
+                                    <div class="service-text">
+                                        Заботливо и со вкусом упакуем ваш бизнес
+                                    </div>
+                                </div>
+                                <div class="service-card" id="service-card2" onclick="service(this)">
+                                    <div class="service-head">
+                                        интернет-маркетинг
+                                    </div>
+                                    <div class="service-text">
+                                        Исследуем целевую аудиторию, создаем точный портрет клиента
+                                    </div>
+                                </div>
+                                <div class="service-card" id="service-card3" onclick="service(this)">
+                                    <div class="service-head">
+                                        сопровождение
+                                    </div>
+                                    <div class="service-text">
+                                        Поддержка и продвижение сайтов 24/7
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="service-text">
-                            Заботливо и со вкусом упакуем ваш бизнес
+                        <div class="service-center">
+                            <img src="assets/service-1.png" alt="" id="service-img1" class="active">
+                            <img src="assets/service-2.png" alt="" id="service-img2" class="active">
+                            <img src="assets/service-3.png" alt="" id="service-img3" class="active">
+                            <img src="assets/service-4.png" alt="" id="service-img4">
+                            <img src="assets/service-5.png" alt="" id="service-img5" class="active">
+                            <img src="assets/service-6.png" alt="" id="service-img6" class="active">
                         </div>
-                    </div>
-                    <div class="service-card" id="service-card2" onclick="service(this)">
-                        <div class="service-head">
-                            интернет-маркетинг
-                        </div>
-                        <div class="service-text">
-                            Исследуем целевую аудиторию, создаем точный портрет клиента
-                        </div>
-                    </div>
-                    <div class="service-card" id="service-card3" onclick="service(this)">
-                        <div class="service-head">
-                            сопровождение
-                        </div>
-                        <div class="service-text">
-                            Поддержка и продвижение сайтов 24/7
-                        </div>
-                    </div>
-                    <!------------------->
-                    <div class="service-card service-card-m" id="service-card7" onclick="service(this)">
-                        <div class="service-head">
-                            сайты
-                        </div>
-                        <div class="service-text">
-                            Разработка эффективных и удобных сайтов любой сложности
-                        </div>
-                    </div>
-                    <div class="service-card service-card-m" id="service-card8" onclick="service(this)">
-                        <div class="service-head">
-                            веб-дизайн
-                        </div>
-                        <div class="service-text">
-                            Грамотно представим образ вашей компании в интернет-пространстве
-                        </div>
-                    </div>
-                    <div class="service-card service-card-m" id="service-card9" onclick="service(this)">
-                        <div class="service-head">
-                            Внедрение CRM
-                        </div>
-                        <div class="service-text">
-                            Помогаем автоматизировать бизнес-процессы
-                        </div>
-                    </div>
-                    <!------------------->
-                </div>
-
-                <!-- LAYER NR. 17 -->
-                <div class="tp-caption     rev_group"
-                     id="slide-109-layer-40"
-                     data-x="['center','center','center','center']" data-hoffset="['385','270','120','325']"
-                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                     data-type="group"
-                     data-responsive_offset="off"
-                     data-frames='[{"delay":1080,"speed":700,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                     style="z-index: 14; min-width: 300px; max-width: none !important; white-space: normal; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0;">
-                    <!-- LAYER NR. 18 -->
-                    <div class="service-card" id="service-card4">
-                        <div class="service-head">
-                            сайты
-                        </div>
-                        <div class="service-text">
-                            Разработка эффективных и удобных сайтов любой сложности
+                        <div class="service-right-mask">
+                            <div class="service-right">
+                                <div class="service-card" id="service-card4" onclick="service(this)">
+                                    <div class="service-head">
+                                        сайты
+                                    </div>
+                                    <div class="service-text">
+                                        Разработка эффективных и удобных сайтов любой сложности
+                                    </div>
+                                </div>
+                                <div class="service-card" id="service-card5" onclick="service(this)">
+                                    <div class="service-head">
+                                        веб-дизайн
+                                    </div>
+                                    <div class="service-text">
+                                        Грамотно представим образ вашей компании в интернет-пространстве
+                                    </div>
+                                </div>
+                                <div class="service-card" id="service-card6" onclick="service(this)">
+                                    <div class="service-head">
+                                        Внедрение CRM
+                                    </div>
+                                    <div class="service-text">
+                                        Помогаем автоматизировать бизнес-процессы
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="service-card" id="service-card5">
-                        <div class="service-head">
-                            веб-дизайн
-                        </div>
-                        <div class="service-text">
-                            Грамотно представим образ вашей компании в интернет-пространстве
-                        </div>
-                    </div>
-                    <div class="service-card" id="service-card6">
-                        <div class="service-head">
-                            Внедрение CRM
-                        </div>
-                        <div class="service-text">
-                            Помогаем автоматизировать бизнес-процессы
-                        </div>
-                    </div>
-                </div>
-
-                <!-- LAYER NR. 25 -->
-                <div class="tp-caption   "
-                     id="slide-109-layer-35"
-                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                     data-width="none"
-                     data-height="none"
-                     data-whitespace="nowrap"
-                     data-type="image"
-                     data-responsive_offset="off"
-                     data-frames='[{"delay":10,"speed":1100,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                     style="z-index: 10;">
-                    <images src="assets/service-1.png" alt="" id="service-img1" class="active">
-                    <img src="assets/service-2.png" alt="" id="service-img2" class="active">
-                    <img src="assets/service-3.png" alt="" id="service-img3" class="active">
-                    <img src="assets/service-4.png" alt="" id="service-img4">
-                    <img src="assets/service-5.png" alt="" id="service-img5" class="active">
-                    <img src="assets/service-6.png" alt="" id="service-img6" class="active">
-                    <img src="assets/phone.png" alt=""  class="phone" style="position: absolute;top:0;">
                 </div>
             </li>
             <!-- SLIDE -->
@@ -318,23 +277,23 @@
                      data-paddingleft="[0,0,0,0]"
                      style="z-index: 10;line-height: normal">
                     <div class="case-slider">
-                        <span class="mocap active" id="mocap1">
+                        <span class="mocap mocap_style_2" id="mocap1">
                             <img src="assets/slide_1_1.png" alt="">
                             <img src="assets/slide_1_2.png" alt="">
                         </span>
-                        <span class="mocap" id="mocap2">
+                        <span class="mocap mocap_style_3" id="mocap2">
                             <img src="assets/slide_2_3.png" alt="">
                             <img src="assets/slide_2_1.png" alt="">
                             <img src="assets/slide_2_2.png" alt="">
                         </span>
-                        <span class="mocap" id="mocap3">
+                        <span class="mocap mocap_style_1" id="mocap3">
                             <img src="assets/slide_3.png" alt="">
                         </span>
-                        <span class="mocap" id="mocap4">
+                        <span class="mocap mocap_style_1" id="mocap4">
                             <img src="assets/slide_4.png" alt="">
                         </span>
                         <div class="slider-right" id="slider-right">
-                            <div class="head active" id="home1">
+                            <div class="head" id="home1">
                                 <h2>Адвента АСБ</h2>
                                 <h3>Сайт агентства содействия бизнесу</h3>
                             </div>
@@ -390,14 +349,6 @@
                                     </svg>
                                 </button>
                             </a>
-                            <div class="slider-control">
-                                <div class="control-left" onclick="slider(true)">
-                                    <img src="assets/slider-arrow.png" alt="">
-                                </div>
-                                <div class="control-right" onclick="slider(false)">
-                                    <img src="assets/slider-arrow.png" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -432,7 +383,7 @@
                             <form action="">
                                 <div class="request-mask"><input type="text" placeholder="ВАШЕ ИМЯ" name="name"></div>
                                 <div class="request-mask"><input type="text" placeholder="ТЕЛЕФОН" name="phone"
-                                                                 data-mask="+7 (999) 999 99 99"></div>
+                                                                 data-mask="+7&8 (999) 999 99 99"></div>
                                 <div class="request-mask"><input type="text" placeholder="ЭЛЕКТРОННАЯ ПОЧТА"
                                                                  name="email"></div>
                                 <div class="request-mask"><input type="text" placeholder="ПАРА СЛОВ О ПРОЕКТЕ"

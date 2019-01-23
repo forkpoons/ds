@@ -63,12 +63,12 @@ let revapi32,
                 navigation: {
                     keyboardNavigation: "on",
                     keyboard_direction: "vertical",
-                    mouseScrollNavigation: "on",
+                    mouseScrollNavigation: "off",
                     mouseScrollReverse: "default",
                     onHoverStop: "on",
                     touch: {
-                        touchenabled: "on",
-                        touchOnDesktop: "on",
+                        touchenabled: "off",
+                        touchOnDesktop: "off",
                         swipe_threshold: 75,
                         swipe_min_touches: 1,
                         swipe_direction: "vertical",
@@ -97,7 +97,7 @@ let revapi32,
                         v_offset: 0
                     }
                 },
-                responsiveLevels: [1240, 1240, 900, 768],
+                responsiveLevels: [1240, 1290, 900, 768],
                 visibilityLevels: [1240, 1000, 900, 480],
                 gridwidth: [1920, 1920, 1280, 768],
                 gridheight: [1000, 1000, 960, 900],
@@ -139,28 +139,22 @@ let revapi32,
         RsTypewriterAddOn(tpj, revapi32);
         RsParticlesAddOn(revapi32);
         let sl = 0;
+        revapi32.bind("revolution.slide.onchange", function (e, data) {
+
+            q = true;
+        });
         revapi32.bind("revolution.slide.onbeforeswap", function (e, data) {
             if (sl === 1) {
                 document.querySelector('.mouse').classList.add("change");
-                if(data.currentslide["0"].id === 'slide4' && data.nextslide["0"].id === 'slide1')
-                    data.nextslide = data.currentslide;
             }
             sl = 1;
-
             if (data.nextslide["0"].id === 'slide3') {
                 animation_slide3(slide);
             } else if (data.nextslide["0"].id === 'slide4') {
                 animation_slide4();
+            } else if (data.nextslide["0"].id === 'slide2') {
+                animation_slide2();
             }
-        });
-
-        revapi32.bind("revolution.slide.layeraction",function (e, data) {
-
-            console.log(data.eventtype);
-            //data.eventtype - Действия слоя (enterstage, enteredstage, leavestage, leftstage)
-            //data.layertype - Тип слоя (image,video,html)
-            //data.layersettings - Стандартные настройки для Слоя
-            //data.layer - Слой как объект jQuery
         });
         revapi32.bind("revolution.slide.onloaded", function (e) {
             setTimeout(function () {
@@ -172,32 +166,32 @@ let revapi32,
             sl = 2;
         });
     }
+
     /* END OF ON LOAD FUNCTION */
 }()); /* END OF WRAPPING FUNCTION */
 
-function animation_slide3(slides) {
-    if (document.getElementById('mocap' + slides).classList.contains('active')) {
-        document.getElementById('mocap' + slides).classList.remove('active');
-        document.getElementById('slider-right').classList.add('animation');
-    }
-    setTimeout(
-        function () {
-            document.getElementById('mocap' + slides).classList.add('active');
-            document.getElementById('slider-right').classList.remove('animation');
-        }, 300);
+function animation_slide2() {
+    document.getElementById("service-main").classList.add('anim');
+    document.getElementById("service-main").classList.add('anim2');
+    setTimeout(function () {
+        document.getElementById("service-main").classList.remove('anim');
+    }, 400);
+    setTimeout(function () {
+        document.getElementById("service-main").classList.remove('anim2');
+    }, 1200);
 }
 
-
-
-
+function animation_slide3(slides) {
+    work_slider(slides)
+}
 
 function animation_slide4() {
     let masks_l = document.querySelector('.request-left').querySelectorAll('.request-mask');
     let masks_r = document.querySelector('.request-right').querySelectorAll('.request-mask');
     const delay = 140;
-    let time = delay+350;
+    let time = delay + 350;
     for (let i = 0; i < 2; i++) {
-        if(masks_l[i].classList.contains('active'))
+        if (masks_l[i].classList.contains('active'))
             masks_l[i].classList.remove('active');
         setTimeout(function () {
             masks_l[i].classList.add('active');
@@ -205,7 +199,7 @@ function animation_slide4() {
         time += delay;
     }
     for (let i = 0; i < masks_r.length; i++) {
-        if(masks_r[i].classList.contains('active'))
+        if (masks_r[i].classList.contains('active'))
             masks_r[i].classList.remove('active');
         setTimeout(function () {
             masks_r[i].classList.add('active');
@@ -213,7 +207,7 @@ function animation_slide4() {
         time += delay;
     }
     for (let i = 2; i < 5; i++) {
-        if(masks_l[i].classList.contains('active'))
+        if (masks_l[i].classList.contains('active'))
             masks_l[i].classList.remove('active');
         setTimeout(function () {
             masks_l[i].classList.add('active');
